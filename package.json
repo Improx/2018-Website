@@ -1,0 +1,23 @@
+{
+  "name": "2018-website",
+  "version": "1.0.0",
+  "description": "Improx Games website",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Improx/2018-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Improx/2018-Website/issues"
+  },
+  "homepage": "https://github.com/Improx/2018-Website#readme"
+}

@@ -7,7 +7,9 @@ const Header = () => (
     <div
       style={{
         background: colors.black,
-        marginBottom: '1.45rem',
+        position: 'fixed',
+        width: '100%',
+        zIndex: 1
       }}
     >
       <div

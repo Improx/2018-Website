@@ -3,16 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {colors} from '../../theme';
-
 const ExternalFooterLink = ({children, href, target, rel}) => (
     <a
-        css={{
-            lineHeight: 2,
-            ':hover': {
-                color: colors.yellow,
-            },
-        }}
         href={href}
         target={target}
         rel={rel}>
@@ -25,6 +17,11 @@ ExternalFooterLink.propTypes = {
     href: PropTypes.string.isRequired,
     target: PropTypes.string,
     rel: PropTypes.string.isRequired,
+};
+
+ExternalFooterLink.defaultProps = {
+    href: '_blank',
+    rel: 'noopener',
 };
 
 export default ExternalFooterLink;

@@ -1,49 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
-import './index.css'
+import LayoutFooter from '../components/LayoutFooter';
+import LayoutHeader from '../components/LayoutHeader';
 
-const Header = () => (
-  <div
-    style={{
-      background: 'black',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Improx Games
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+import {colors} from '../theme';
 
-const TemplateWrapper = ({ children }) => (
-  <div>
+import './index.css';
+
+const TemplateWrapper = ({children}) => (
+  <div css={{
+    backgroundColor: colors.grey,
+  }}>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Improx Games"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        {name: 'description', content: 'Sample'},
+        {name: 'keywords', content: 'sample, something'},
       ]}
     />
-    <Header />
+    <LayoutHeader />
     <div
       style={{
         margin: '0 auto',
@@ -54,11 +31,12 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <LayoutFooter />
   </div>
-)
+);
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-}
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;

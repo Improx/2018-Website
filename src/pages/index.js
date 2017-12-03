@@ -1,14 +1,13 @@
 'use strict';
 
-import React from 'react'
-import Link from 'gatsby-link'
-import Background from './background.png'
-console.log(Background)
+import React from 'react';
+import Link from 'gatsby-link';
+import Background from './background.png';
 
-var style = {
+let style = {
   backgroundImage: `url(${Background})`,
-  backgroundSize: "cover"
-}
+  backgroundSize: 'cover',
+};
 
 const IndexPage = () => (
   <div style={style}>
@@ -17,6 +16,6 @@ const IndexPage = () => (
     <p>Now go build something great.</p>
     <Link to="/page-2/">Go to page 2</Link>
   </div>
-)
+);
 
-export default IndexPage
+export default IndexPage;

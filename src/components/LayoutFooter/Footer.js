@@ -32,9 +32,6 @@ const Footer = () => (
         paddingBottom: 30,
     }}>
         <FooterRow>
-
-        </FooterRow>
-        <FooterRow>
             {socialInfo.map((x, i) => {
                 return <ExternalIconLink
                 href={x.path}

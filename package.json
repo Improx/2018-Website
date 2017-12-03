@@ -1,23 +1,31 @@
 {
-  "name": "2018-website",
+  "name": "improx-2018-site",
+  "description": "Improx 2018 website",
   "version": "1.0.0",
-  "description": "Improx Games website",
-  "main": "index.js",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "gatsby": "^1.9.63",
+    "gatsby-link": "^1.6.21",
+    "gatsby-plugin-glamor": "^1.6.9",
+    "gatsby-plugin-google-fonts": "0.0.3",
+    "gatsby-plugin-react-helmet": "^1.0.5",
+    "hex2rgba": "0.0.1"
   },
-  "devDependencies": {},
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
   "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Improx/2018-Website.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Improx/2018-Website/issues"
-  },
-  "homepage": "https://github.com/Improx/2018-Website#readme"
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-react": "^7.5.1",
+    "prettier": "^1.7.4"
+  }
 }

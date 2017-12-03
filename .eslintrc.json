@@ -11,6 +11,15 @@
       "sourceType": "module"
   },
   "rules": {
-    "quote-props": ["error", "as-needed"]
+    "quote-props": ["error", "as-needed"],
+    "require-jsdoc": ["error", {
+        "require": {
+            "FunctionDeclaration": false,
+            "MethodDefinition": false,
+            "ClassDeclaration": false,
+            "ArrowFunctionExpression": false,
+            "FunctionExpression": false
+        }
+    }]
   }
 }

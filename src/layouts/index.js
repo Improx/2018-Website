@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import LayoutFooter from '../components/LayoutFooter';
 import LayoutHeader from '../components/LayoutHeader';
 import LayoutMission from '../components/LayoutMission';
+import Games from '../components/Games';
 
 import {colors} from '../theme';
 
@@ -23,16 +24,8 @@ const TemplateWrapper = ({children}) => (
     />
     <LayoutHeader />
     <LayoutMission />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+    <Games />
+    <LayoutMission />
     <LayoutFooter />
   </div>
 );

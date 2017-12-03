@@ -35,7 +35,7 @@ ExternalIconLink.propTypes = {
 
 ExternalIconLink.defaultProps = {
     target: '_blank',
-    rel: 'noopener',
+    rel: 'nofollow noopener noreferrer',
 };
 
 export default ExternalIconLink;

@@ -2,7 +2,7 @@ import OskiProfile from '../../../assets/images/team/OskiProfile.png';
 import MiikaProfile from '../../../assets/images/team/MiikaProfile.jpg';
 import MaxProfile from '../../../assets/images/team/MaxProfile.png';
 import JussiProfile from '../../../assets/images/team/JussiProfile.jpeg';
-import LauriProfile from '../../../assets/images/team/LauriProfile.jpg';
+import LauriProfile from '../../../assets/images/team/LauriProfile.png';
 
 
 const dudeInfos = [

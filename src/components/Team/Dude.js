@@ -27,6 +27,8 @@ export default class Dude extends React.Component{
         this.state.expanded ? 
         (<div css={{
             padding: 10,
+            backgroundColor: colors.dark,
+            color: colors.light
         }}>
             <h1 css={{
                 height: '2em',
@@ -39,13 +41,14 @@ export default class Dude extends React.Component{
         return (
         <div css={{
             backgroundSize: 'cover',
-            backgroundColor: colors.light,
+            backgroundColor: colors.black,
             color: colors.black,
         }}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseExit}>
             <img css={{
                 margin: 0,
+                borderRadius: '100%'
             }}
             src={dudeInfo.image}></img>
 

@@ -1,59 +1,49 @@
 import React from 'react';
+import Modal from "react-responsive-modal";
 import PropTypes from 'prop-types';
 
 import {colors} from '../../theme';
 
+const styles = {
+    fontFamily: "sans-serif",
+    textAlign: "center"
+}
+
 export default class Dude extends React.Component{
-    state = { expanded: false };
+    state = { open: false };
 
-    setExpanded(newState){
-        this.setState({ expanded: newState });
-    }
+    onOpenModal = () => {
+        this.setState({ open: true });
+      };
+    
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
 
-    handleMouseEnter = (e) => {
-        e.preventDefault();
-        this.setExpanded(true);
-    }
-
-    handleMouseExit = (e) => {
-        e.preventDefault();
-        this.setExpanded(false);
-    }
-
-    render(){
+    render() {
         const dudeInfo = this.props.dudeInfo;
-
-        const desc = 
-        this.state.expanded ? 
-        (<div css={{
-            padding: 10,
-            backgroundColor: colors.dark,
-            color: colors.light
-        }}>
-            <h2 css={{
-                height: '2em',
-            }}>{dudeInfo.name}</h2>
-
-            <p>{dudeInfo.description}</p>
-        </div>)
-        : (<none></none>);
-
+        
+        const { open } = this.state;
+        
         return (
-        <div css={{
-            backgroundSize: 'cover',
-            backgroundColor: colors.black,
-            color: colors.black,
-        }}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseExit}>
+            <div css={{
+                backgroundSize: 'cover',
+                backgroundColor: colors.black,
+                color: colors.black,
+                textAlign: 'center'
+            }}
+            onClick={this.onOpenModal}>
             <img css={{
                 margin: 0,
                 borderRadius: '100%'
             }}
             src={dudeInfo.image}></img>
 
-            {desc}
-        </div>
+            <Modal open={open} onClose={this.onCloseModal} little>
+                <h2>{dudeInfo.name}</h2>
+                <p>{dudeInfo.description}</p>
+            </Modal>
+            </div>
         );
     }
 }

@@ -1,0 +1,9 @@
+.dudeImage {
+    background-size: 'cover';
+    margin: 0;
+    border-radius: 100%;
+}
+
+.dudeImage:hover {
+    border: 10px solid black;
+}

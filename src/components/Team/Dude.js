@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 
 import {colors} from '../../theme';
 
-const styles = {
-    fontFamily: "sans-serif",
-    textAlign: "center"
-}
+import styles from './dudeImage.css'
 
 export default class Dude extends React.Component{
     state = { open: false };
@@ -33,10 +30,8 @@ export default class Dude extends React.Component{
                 textAlign: 'center'
             }}
             onClick={this.onOpenModal}>
-            <img css={{
-                margin: 0,
-                borderRadius: '100%'
-            }}
+            <img 
+            className="dudeImage"
             src={dudeInfo.image}></img>
 
             <Modal open={open} onClose={this.onCloseModal} little>

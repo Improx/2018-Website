@@ -30,9 +30,9 @@ export default class Dude extends React.Component{
             backgroundColor: colors.dark,
             color: colors.light
         }}>
-            <h1 css={{
+            <h2 css={{
                 height: '2em',
-            }}>{dudeInfo.name}</h1>
+            }}>{dudeInfo.name}</h2>
 
             <p>{dudeInfo.description}</p>
         </div>)

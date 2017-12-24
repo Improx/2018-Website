@@ -6,6 +6,7 @@ import LayoutFooter from '../components/LayoutFooter';
 import LayoutHeader from '../components/LayoutHeader';
 import LayoutMission from '../components/LayoutMission';
 import Games from '../components/Games';
+import Team from '../components/Team';
 
 import {colors} from '../theme';
 
@@ -25,7 +26,7 @@ const TemplateWrapper = ({children}) => (
     <LayoutHeader />
     <LayoutMission />
     <Games />
-    <LayoutMission />
+    <Team />
     <LayoutFooter />
   </div>
 );

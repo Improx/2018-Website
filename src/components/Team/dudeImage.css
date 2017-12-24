@@ -1,0 +1,10 @@
+.dudeImage {
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.dudeImage:hover {
+    background: #e1e1e1;
+    border: 10px solid #e2e2e2;
+    padding: 0;
+}

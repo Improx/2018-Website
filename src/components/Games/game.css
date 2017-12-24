@@ -1,0 +1,16 @@
+.gameContainer{
+    overflow: hidden;
+    margin: 0;
+}
+
+.gameImage:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease;
+}
+
+.transition-exit-active {
+    transform: scale(0);
+    transition: transform 0ms ease;
+}

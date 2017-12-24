@@ -1,55 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Modal from "react-responsive-modal";
 
 import {colors} from '../../theme';
+import styles from './game.css'
 
 export default class Game extends React.Component{
-    state = { expanded: false };
+    state = { open: false };
 
-    setExpanded(newState){
-        this.setState({ expanded: newState });
-    }
+    onOpenModal = () => {
+        this.setState({ open: true });
+      };
+    
+    onCloseModal = () => {
+        this.setState({ open: false });
+    };
 
-    handleMouseEnter = (e) => {
+    handleClick = e => {
         e.preventDefault();
-        this.setExpanded(true);
-    }
-
-    handleMouseExit = (e) => {
-        e.preventDefault();
-        this.setExpanded(false);
+        this.setState({ open: true});
     }
 
     render(){
         const gameInfo = this.props.gameInfo;
-
-        const desc = 
-        this.state.expanded ? 
-        (<div css={{
-            padding: 10,
-        }}>
-            <h1 css={{
-                height: '2em',
-            }}>{gameInfo.name}</h1>
-
-            <p>{gameInfo.description}</p>
-        </div>)
-        : (<none></none>);
+        const open = this.state.open;
 
         return (
-        <div css={{
-            backgroundSize: 'cover',
-            backgroundColor: colors.light,
-            color: colors.black,
-        }}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseExit}>
-            <img css={{
-                margin: 0,
-            }}
-            src={gameInfo.header}></img>
-
-            {desc}
+        <div
+        onClick={this.handleClick} className="gameContainer">
+            <img src={this.props.gameInfo.header} className="gameImage"></img>
+            <Modal open={open} onClose={this.onCloseModal} little classNames={{transitionExitActive: 'transition-exit-active'}}>
+                <h2>{gameInfo.name}</h2>
+                <img src={gameInfo.header}></img>
+                <p>{gameInfo.description}</p>
+            </Modal>
         </div>
         );
     }

@@ -1,15 +1,14 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Headroom from 'react-headroom';
 
 import {colors} from '../../theme';
 
 const Header = () => (
-    <div
+    <Headroom
       style={{
         background: colors.black,
-        position: 'fixed',
         width: '100%',
-        zIndex: 1
       }}
     >
       <div
@@ -31,7 +30,7 @@ const Header = () => (
           </Link>
         </h1>
       </div>
-    </div>
+    </Headroom>
   );
 
   export default Header;

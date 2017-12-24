@@ -11,6 +11,7 @@
     "gatsby-plugin-react-helmet": "^1.0.5",
     "hex2rgba": "0.0.1",
     "react-flexbox-grid": "^2.0.0",
+    "react-headroom": "^2.2.2",
     "react-responsive-modal": "^2.0.0"
   },
   "keywords": [

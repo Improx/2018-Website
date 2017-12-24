@@ -12,6 +12,7 @@
   },
   "rules": {
     "quote-props": ["error", "as-needed"],
+    "linebreak-style": 0,
     "require-jsdoc": ["error", {
         "require": {
             "FunctionDeclaration": false,

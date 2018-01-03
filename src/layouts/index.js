@@ -10,12 +10,15 @@ import Team from '../components/Team';
 
 import {colors} from '../theme';
 
+import 'bulma/css/bulma.css';
 import './index.css';
 
 const TemplateWrapper = ({children}) => (
-  <div css={{
-    backgroundColor: colors.grey,
-  }}>
+  <div
+    css={{
+      backgroundColor: colors.black,
+    }}
+  >
     <Helmet
       title="Improx Games"
       meta={[

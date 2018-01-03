@@ -1,36 +1,55 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
+import Scroll from 'react-scroll';
+
+import logoFull from '../../../assets/icons/improx_full.png';
+import logoBulb from '../../../assets/icons/improx.png';
 
 import {colors} from '../../theme';
+import './Header.css';
 
 const Header = () => (
-    <Headroom
-      style={{
-        background: colors.black,
-        width: '100%',
-      }}
-    >
-      <div
+  <Headroom
+    style={{
+      background: colors.black,
+      width: '100%',
+    }}
+  >
+    <div className="header-container">
+      <Link
+        to="/"
         style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '1.45rem 1.0875rem',
+          color: colors.light,
         }}
+        className="logo-container"
       >
-        <h1 style={{margin: 0}}>
-          <Link
-            to="/"
-            style={{
-              color: colors.light,
-              textDecoration: 'none',
-            }}
-          >
-            Improx Games
-          </Link>
-        </h1>
+        <img src={logoFull} alt="Improx Games" className="logo" />
+      </Link>
+      <div className="nav-links">
+        <Scroll.Link
+          activeClass="active"
+          to="games"
+          spy
+          smooth
+          duration={500}
+          className="nav-link"
+        >
+          Games
+        </Scroll.Link>
+        <Scroll.Link
+          activeClass="active"
+          to="team"
+          spy
+          smooth
+          duration={500}
+          className="nav-link"
+        >
+          Team
+        </Scroll.Link>
       </div>
-    </Headroom>
-  );
+    </div>
+  </Headroom>
+);
 
-  export default Header;
+export default Header;

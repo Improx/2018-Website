@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "bulma": "^0.6.1",
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-glamor": "^1.6.9",
@@ -12,7 +13,8 @@
     "hex2rgba": "0.0.1",
     "react-flexbox-grid": "^2.0.0",
     "react-headroom": "^2.2.2",
-    "react-responsive-modal": "^2.0.0"
+    "react-responsive-modal": "^2.0.0",
+    "react-scroll": "^1.7.4"
   },
   "keywords": [
     "gatsby"

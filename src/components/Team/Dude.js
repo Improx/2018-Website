@@ -14,20 +14,26 @@ export default class Dude extends React.Component{
         
         return (
             <div css={{
-                backgroundSize: 'cover',
-                backgroundColor: colors.light,
-                color: colors.black,
-                textAlign: 'center',
-                boxShadow: "0 0 2px #888888"
+                padding: "0 15px 0 15px"
             }}>
-            <img 
-            css={{
-                width: "500px"
-            }}
-            src={dudeInfo.image}></img>
-            <h2>{dudeInfo.name}</h2>
-            <p>{dudeInfo.description}</p>
-            
+                <div css={{
+                    backgroundSize: 'cover',
+                    backgroundColor: colors.light,
+                    color: colors.black,
+                    boxShadow: "0 0 2px #888888"
+                }}>
+                    <img 
+                    css={{
+                        width: "100%"
+                    }}
+                    src={dudeInfo.image}></img>
+                    <div css={{
+                        marginLeft: "10px"
+                    }}>
+                        <p><b>{dudeInfo.name}</b></p>
+                        <p>{dudeInfo.description}</p>
+                    </div>
+                </div>
             </div>
         );
     }

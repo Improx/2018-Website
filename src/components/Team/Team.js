@@ -13,10 +13,12 @@ const Team = () => (
   <Scroll.Element name="team">
     <div
       css={{
-        backgroundColor: colors.black,
-        color: colors.light,
+        backgroundColor: colors.light,
+        color: colors.black,
+        textAlign: "center",
         paddingTop: 30,
         paddingBottom: 30,
+        marginTop: 30
       }}
     >
       <Block>

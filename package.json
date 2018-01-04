@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "bulma": "^0.6.1",
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-glamor": "^1.6.9",

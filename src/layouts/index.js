@@ -10,7 +10,6 @@ import Team from '../components/Team';
 
 import {colors} from '../theme';
 
-import 'bulma/css/bulma.css';
 import './index.css';
 
 const TemplateWrapper = ({children}) => (

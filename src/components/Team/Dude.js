@@ -30,7 +30,8 @@ export default class Dude extends React.Component{
                     <div css={{
                         marginLeft: "10px"
                     }}>
-                        <p><b>{dudeInfo.name}</b></p>
+                        <h3>{dudeInfo.name}</h3>
+                        <p css={{color: colors.grey}}>{dudeInfo.role}</p>
                         <p>{dudeInfo.description}</p>
                     </div>
                 </div>

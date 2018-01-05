@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Block = ({className, contentClassName, children}) => (
-  <div className="section">{children}</div>
+  <div>{children}</div>
 );
 
 Block.propTypes = {

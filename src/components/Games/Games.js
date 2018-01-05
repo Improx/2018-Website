@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Row, Col} from 'react-flexbox-grid';
 import Scroll from 'react-scroll';
 
 import Block from '../Block';
 import Game from './Game';
 
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
 import gameInfos from './gameInfos';
 
 const Games = () => (
@@ -19,11 +18,23 @@ const Games = () => (
       }}
     >
       <Block>
-        <h1>GAMES</h1>
+        <h1
+          css={{
+            fontFamily: fonts.primary,
+            color: colors.black,
+            textAlign: 'center',
+          }}
+        >
+          GAMES
+        </h1>
         <div
           css={{
             display: 'grid',
-            gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
+            gridTemplateColumns: 'repeat( auto-fill, minmax(350px, 1fr) )',
+            justifyContent: 'center',
+            gridGap: 15,
+            marginLeft: 15,
+            marginRight: 15,
           }}
         >
           {gameInfos.map((x, i) => {

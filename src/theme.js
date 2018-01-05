@@ -8,6 +8,11 @@ const colors = {
   dark: '#000000',
 };
 
+const fonts = {
+  primary: 'francois one',
+  secondary: 'lato',
+};
+
 const SIZES = {
   xsmall: {
     min: 0,
@@ -71,4 +76,4 @@ const media = {
   },
 };
 
-export {colors, media};
+export {colors, fonts, media};

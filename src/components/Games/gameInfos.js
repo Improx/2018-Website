@@ -27,33 +27,6 @@ const gameInfos = [
       play: 'https://www.kongregate.com/games/oskiiiii/way-out',
     },
   },
-  {
-    name: 'No Way Out',
-    description:
-      'Climb up! A randomly generated platformer inspired by the famous kicking scene from the movie 300.',
-    header: 'https://i.imgur.com/9b4uNa9.png',
-    links: {
-      play: 'https://www.kongregate.com/games/oskiiiii/way-out',
-    },
-  },
-  {
-    name: 'No Way Out',
-    description:
-      'Climb up! A randomly generated platformer inspired by the famous kicking scene from the movie 300.',
-    header: 'https://i.imgur.com/9b4uNa9.png',
-    links: {
-      play: 'https://www.kongregate.com/games/oskiiiii/way-out',
-    },
-  },
-  {
-    name: 'No Way Out',
-    description:
-      'Climb up! A randomly generated platformer inspired by the famous kicking scene from the movie 300.',
-    header: 'https://i.imgur.com/9b4uNa9.png',
-    links: {
-      play: 'https://www.kongregate.com/games/oskiiiii/way-out',
-    },
-  },
 ];
 
 export default gameInfos;

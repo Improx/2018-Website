@@ -5,7 +5,7 @@ import Scroll from 'react-scroll';
 import Block from '../Block';
 import Dude from './dude';
 
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
 import dudeInfos from './dudeInfos';
 
 const Team = () => (
@@ -13,27 +13,33 @@ const Team = () => (
     <div
       css={{
         backgroundColor: colors.light,
-        color: colors.black,
         paddingTop: 30,
         paddingBottom: 30,
-        marginTop: 30
+        marginTop: 3,
       }}
     >
       <Block>
-
-
-        <h2 css={{ textAlign: "center" }}>TEAM</h2>
-
+        <h1
+          css={{
+            fontFamily: fonts.primary,
+            color: colors.black,
+            textAlign: 'center',
+          }}
+        >
+          THE TEAM
+        </h1>
         <div
           css={{
             display: 'grid',
-            gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
+            gridTemplateColumns: 'repeat( auto-fit, minmax(350px, 1fr) )',
+            gridGap: 15,
+            marginLeft: 15,
+            marginRight: 15,
+            gridAutoColumns: 0,
           }}
         >
           {dudeInfos.map((x, i) => {
-            return (
-                <Dude dudeInfo={x} />
-            );
+            return <Dude dudeInfo={x} key={i} />;
           })}
         </div>
       </Block>

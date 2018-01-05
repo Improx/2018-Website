@@ -8,11 +8,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `limelight`,
-          // you can also specify font weights and styles
-          `source sans pro:300,400,400i,700`,
-        ],
+        fonts: [`francois one`, `lato`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/favicon.png',
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false,
+        },
       },
     },
   ],

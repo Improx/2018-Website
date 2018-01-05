@@ -3,10 +3,9 @@ import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
 import Scroll from 'react-scroll';
 
-import logoFull from '../../../assets/icons/improx_full.png';
-import logoBulb from '../../../assets/icons/improx.png';
+import logoFull from '../../../assets/icons/improxLogoWhite.png';
 
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
 import './Header.css';
 
 const Header = () => (

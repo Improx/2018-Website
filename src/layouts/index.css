@@ -60,9 +60,20 @@ dfn {
   font-style: italic;
 }
 h1 {
+  font-family: "Fjalla One", sans-serif;
   font-size: 2em;
   margin: 0.67em 0;
 }
+h2 {
+  font-family: "Average", serif;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One", sans-serif;
+}
+
 mark {
   background-color: #ff0;
   color: #000;

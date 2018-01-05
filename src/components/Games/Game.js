@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './game.css';
 
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
 
 export default class Game extends React.Component {
   render() {
@@ -12,17 +12,27 @@ export default class Game extends React.Component {
     return (
       <div
         css={{
-          height: '100%',
           position: 'relative',
           backgroundColor: colors.light,
+          height: '100%',
         }}
       >
-        <img src={this.props.gameInfo.header} css={{margin: 0}} />
-        <div css={{marginBottom: 50}}>
-          <h2>{gameInfo.name}</h2>
-          <p>{gameInfo.description}</p>
+        <div
+          css={{
+            boxShadow: '0 0 2px #888888',
+            height: '100%',
+            paddingBottom: 50,
+          }}
+        >
+          <img src={this.props.gameInfo.header} css={{margin: 0}} />
+          <div css={{padding: 10, color: colors.black}}>
+            <h2 css={{fontFamily: fonts.primary}}>{gameInfo.name}</h2>
+            <p css={{fontFamily: fonts.secondary, fontSize: '1.1em'}}>
+              {gameInfo.description}
+            </p>
+          </div>
+          {this.renderFooter(gameInfo.links)}
         </div>
-        {this.renderFooter(gameInfo.links)}
       </div>
     );
   }
@@ -34,9 +44,12 @@ export default class Game extends React.Component {
       <footer
         css={{
           position: 'absolute',
-          bottom: 0,
-          marginBottom: 10,
-          marginTop: 10,
+          bottom: 15,
+          left: 15,
+          right: 15,
+          float: 'bottom',
+          borderTop: 'solid 1px #88888866',
+          textAlign: 'center',
         }}
       >
         {links.play && (
@@ -44,10 +57,33 @@ export default class Game extends React.Component {
             href={links.play}
             css={{
               color: colors.black,
-              ':hover': {backgroundColor: colors.black, color: colors.yellow},
+              height: '100%',
+              textDecoration: 'none',
             }}
           >
-            <strong>Play</strong>
+            <div
+              css={{
+                width: '100%',
+                height: '100%',
+                paddingTop: 15,
+                paddingBottom: 15,
+                backgroundColor: colors.black,
+                color: colors.light,
+                ':hover': {
+                  color: colors.yellow,
+                },
+              }}
+            >
+              <span
+                css={{
+                  fontFamily: fonts.primary,
+                  fontSize: '1.3em',
+                  letterSpacing: '2px',
+                }}
+              >
+                <strong>Play</strong>
+              </span>
+            </div>
           </a>
         )}
         {links.presskit && <a href={links.presskit}>Presskit</a>}

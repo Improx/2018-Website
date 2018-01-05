@@ -25,7 +25,6 @@ const socialInfo = [
 
 const Footer = () => (
   <div>
-    <hr css={{backgroundColor: colors.yellow}} />
     <footer
       css={{
         backgroundColor: colors.black,
@@ -34,6 +33,9 @@ const Footer = () => (
         paddingBottom: 30,
       }}
     >
+      <h3 css={{textAlign: 'center', margin: 0, marginBottom: '0.3em'}}>
+        Contact us at:
+      </h3>
       <FooterRow>
         {socialInfo.map((x, i) => {
           return <ExternalIconLink href={x.path} src={x.icon} key={i} />;

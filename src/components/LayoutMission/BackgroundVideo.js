@@ -7,9 +7,8 @@ let rule = css({
   width: 'auto',
   height: 'auto',
   maxWidth: '100%',
-  minHeight: '100%',
-  position: 'relative',
   filter: 'brightness(30%)',
+  marginBottom: '-2%',
 });
 
 const BackgroundVideo = () => (

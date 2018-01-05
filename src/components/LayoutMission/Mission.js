@@ -4,13 +4,9 @@ import BackgroundVideo from './BackgroundVideo';
 import MissionText from './MissionText';
 
 const Mission = () => (
-  <div
-    css={{
-      position: 'relative',
-      padding: 0,
-      margin: 0,
-    }}
-  >
+  <div css={{
+    position: "relative"
+  }}>
     <BackgroundVideo />
     <MissionText />
   </div>

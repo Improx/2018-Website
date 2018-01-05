@@ -32,9 +32,15 @@ const Games = () => (
             display: 'grid',
             gridTemplateColumns: 'repeat( auto-fill, minmax(350px, 1fr) )',
             justifyContent: 'center',
+            width: '60%',
+            margin: '0 auto',
             gridGap: 15,
-            marginLeft: 15,
-            marginRight: 15,
+            '@media(max-width: 600px)': {
+              gridTemplateColumns: 'repeat( auto-fit, minmax(350px, 1fr) )',
+            },
+            '@media(max-width: 800px)': {
+              width: '90%',
+            },
           }}
         >
           {gameInfos.map((x, i) => {

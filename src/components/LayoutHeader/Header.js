@@ -46,6 +46,16 @@ const Header = () => (
         >
           Team
         </Scroll.Link>
+        <Scroll.Link
+          activeClass="active"
+          to="contact"
+          spy
+          smooth
+          duration={500}
+          className="nav-link"
+        >
+          Contact
+        </Scroll.Link>
       </div>
     </div>
   </Headroom>

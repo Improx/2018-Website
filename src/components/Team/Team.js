@@ -12,7 +12,7 @@ const Team = () => (
   <Scroll.Element name="team">
     <div
       css={{
-        backgroundColor: colors.light,
+        backgroundColor: colors.black,
         paddingTop: 30,
         paddingBottom: 30,
         marginTop: 3,
@@ -22,7 +22,7 @@ const Team = () => (
         <h1
           css={{
             fontFamily: fonts.primary,
-            color: colors.black,
+            color: colors.light,
             textAlign: 'center',
           }}
         >
@@ -31,11 +31,18 @@ const Team = () => (
         <div
           css={{
             display: 'grid',
-            gridTemplateColumns: 'repeat( auto-fit, minmax(350px, 1fr) )',
+            gridTemplateColumns: 'repeat( auto-fit, minmax(220px, 1fr) )',
             gridGap: 15,
-            marginLeft: 15,
-            marginRight: 15,
+            width: '60%',
+            margin: '0 auto',
             gridAutoColumns: 0,
+            justifyContent: 'space-evenly',
+            '@media(max-width: 600px)': {
+              gridTemplateColumns: 'repeat( auto-fit, minmax(350px, 1fr) )',
+            },
+            '@media(max-width: 800px)': {
+              width: '90%',
+            },
           }}
         >
           {dudeInfos.map((x, i) => {

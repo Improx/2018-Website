@@ -4,7 +4,7 @@ import {css} from 'glamor';
 import video from '../../../assets/videos/junction.mp4';
 
 let rule = css({
-  width: 'auto',
+  verticalAlign: "middle",
   height: 'auto',
   maxWidth: '100%',
   filter: 'brightness(30%)',

@@ -4,7 +4,7 @@ import Headroom from 'react-headroom';
 import Scroll from 'react-scroll';
 
 import logoFull from '../../../assets/icons/improxLogoWhite.png';
-
+import menuIcon from '../../../assets/icons/yellow_menu.png'
 import {fonts, colors} from '../../theme';
 import './Header.css';
 
@@ -25,6 +25,41 @@ const Header = () => (
       >
         <img src={logoFull} alt="Improx Games" className="logo" />
       </Link>
+      <div className="dropdown-menu">
+        <img src={menuIcon}/>
+        <div css={{backgroundColor: colors.black}} className="dropdown-content">
+          <Scroll.Link
+            activeClass="active"
+            to="games"
+            spy
+            smooth
+            duration={500}
+            className="nav-link"
+          >
+            Games
+          </Scroll.Link>
+          <Scroll.Link
+            activeClass="active"
+            to="team"
+            spy
+            smooth
+            duration={500}
+            className="nav-link"
+          >
+            Team
+          </Scroll.Link>
+          <Scroll.Link
+            activeClass="active"
+            to="contact"
+            spy
+            smooth
+            duration={500}
+            className="nav-link"
+          >
+            Contact
+          </Scroll.Link>
+        </div>
+      </div>
       <div className="nav-links">
         <Scroll.Link
           activeClass="active"

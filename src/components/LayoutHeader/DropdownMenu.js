@@ -2,32 +2,47 @@ import React from 'react';
 
 import classNames from 'classnames';
 import Scroll from 'react-scroll';
+import onClickOutside from 'react-onclickoutside';
 
 import menuIcon from '../../../assets/icons/yellow_menu.png';
-import {colors} from '../../theme';
+import { colors } from '../../theme';
 import './DropdownMenu.css';
 
-export default class DropdownMenu extends React.Component {
+class DropdownMenu extends React.Component {
   constructor() {
     super();
-    this.state = {open: false};
+    this.state = { open: false };
   }
 
   handleDropdownClick() {
-    this.setState((prevState) => ({
-      open: !prevState.open,
+    this.state.open ? this.closeDropdown() : this.openDropdown();
+  }
+
+  handleClickOutside = () => {
+    this.closeDropdown();
+  };
+
+  openDropdown() {
+    this.setState(prevState => ({
+      open: true,
+    }));
+  }
+
+  closeDropdown() {
+    this.setState(prevState => ({
+      open: false,
     }));
   }
 
   render() {
     return (
       <div
-        className={classNames({'dropdown-menu': true, show: this.state.open})}
+        className={classNames({ 'dropdown-menu': true, show: this.state.open })}
         onClick={this.handleDropdownClick.bind(this)}
       >
         <img src={menuIcon} />
         <div
-          css={{backgroundColor: colors.black}}
+          css={{ backgroundColor: colors.black }}
           className="dropdown-content"
         >
           <Scroll.Link
@@ -37,6 +52,7 @@ export default class DropdownMenu extends React.Component {
             smooth
             duration={500}
             className="nav-link"
+            onClick={this.handleDropdownClick}
           >
             Games
           </Scroll.Link>
@@ -47,21 +63,26 @@ export default class DropdownMenu extends React.Component {
             smooth
             duration={500}
             className="nav-link"
+            onClick={this.handleDropdownClick}
           >
             Team
           </Scroll.Link>
-          <Scroll.Link
-            activeClass="active"
-            to="contact"
-            spy
-            smooth
-            duration={500}
-            className="nav-link"
-          >
-            Contact
-          </Scroll.Link>
+          <div onClick={this.handleDropdownClick.bind(this)}>
+            <Scroll.Link
+              activeClass="active"
+              to="contact"
+              spy
+              smooth
+              duration={500}
+              className="nav-link"
+            >
+              Contact
+            </Scroll.Link>
+          </div>
         </div>
       </div>
     );
   }
 }
+
+export default onClickOutside(DropdownMenu);

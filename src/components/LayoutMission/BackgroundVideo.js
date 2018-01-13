@@ -4,11 +4,10 @@ import {css} from 'glamor';
 import video from '../../../assets/videos/junction.mp4';
 
 let rule = css({
-  verticalAlign: "middle",
+  verticalAlign: 'middle',
   height: 'auto',
   maxWidth: '100%',
   filter: 'brightness(30%)',
-  marginBottom: '-2%',
 });
 
 const BackgroundVideo = () => (

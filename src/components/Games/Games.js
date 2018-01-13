@@ -32,7 +32,7 @@ const Games = () => (
             display: 'grid',
             gridTemplateColumns: 'repeat( auto-fill, minmax(350px, 1fr) )',
             justifyContent: 'center',
-            width: '60%',
+            width: '65%',
             margin: '0 auto',
             gridGap: 15,
             '@media(max-width: 600px)': {

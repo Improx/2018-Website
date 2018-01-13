@@ -33,12 +33,12 @@ const Team = () => (
             display: 'grid',
             gridTemplateColumns: 'repeat( auto-fit, minmax(220px, 1fr) )',
             gridGap: 15,
-            width: '60%',
+            width: '65%',
             margin: '0 auto',
             gridAutoColumns: 0,
             justifyContent: 'space-evenly',
             '@media(max-width: 600px)': {
-              gridTemplateColumns: 'repeat( auto-fit, minmax(350px, 1fr) )',
+              gridTemplateColumns: 'repeat( auto-fit, minmax(200px, 1fr) )',
             },
             '@media(max-width: 800px)': {
               width: '90%',

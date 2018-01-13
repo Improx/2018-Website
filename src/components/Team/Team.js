@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Scroll from 'react-scroll';
 
 import Block from '../Block';
-import Dude from './dude';
+import Dude from './Dude';
 
 import {fonts, colors} from '../../theme';
 import dudeInfos from './dudeInfos';

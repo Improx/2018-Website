@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
-import Scroll from 'react-scroll';
+
+import DropdownMenu from './DropdownMenu';
+import DesktopMenu from './DesktopMenu';
 
 import logoFull from '../../../assets/icons/improxLogoWhite.png';
-
-import {fonts, colors} from '../../theme';
+import {colors} from '../../theme';
 import './Header.css';
 
 const Header = () => (
@@ -25,38 +26,8 @@ const Header = () => (
       >
         <img src={logoFull} alt="Improx Games" className="logo" />
       </Link>
-      <div className="nav-links">
-        <Scroll.Link
-          activeClass="active"
-          to="games"
-          spy
-          smooth
-          duration={500}
-          className="nav-link"
-        >
-          Games
-        </Scroll.Link>
-        <Scroll.Link
-          activeClass="active"
-          to="team"
-          spy
-          smooth
-          duration={500}
-          className="nav-link"
-        >
-          Team
-        </Scroll.Link>
-        <Scroll.Link
-          activeClass="active"
-          to="contact"
-          spy
-          smooth
-          duration={500}
-          className="nav-link"
-        >
-          Contact
-        </Scroll.Link>
-      </div>
+      <DropdownMenu />
+      <DesktopMenu />
     </div>
   </Headroom>
 );

@@ -46,35 +46,45 @@ class DropdownMenu extends React.Component {
           className="dropdown-content"
         >
           <Scroll.Link
-            activeClass="active"
-            to="games"
-            spy
-            smooth
-            duration={500}
             className="nav-link"
-            onClick={this.handleDropdownClick}
+            onClick={() => {
+              Scroll.scroller.scrollTo('games', {
+                activeClass: 'active',
+                spy: true,
+                smooth: true,
+                duration: 500,
+              });
+              this.closeDropdown();
+            }}
           >
             Games
           </Scroll.Link>
           <Scroll.Link
-            activeClass="active"
-            to="team"
-            spy
-            smooth
-            duration={500}
             className="nav-link"
-            onClick={this.handleDropdownClick}
+            onClick={() => {
+              Scroll.scroller.scrollTo('team', {
+                activeClass: 'active',
+                spy: true,
+                smooth: true,
+                duration: 500,
+              });
+              this.closeDropdown();
+            }}
           >
             Team
           </Scroll.Link>
-          <div onClick={this.handleDropdownClick.bind(this)}>
+          <div onClick={this.closeDropdown.bind(this)}>
             <Scroll.Link
-              activeClass="active"
-              to="contact"
-              spy
-              smooth
-              duration={500}
               className="nav-link"
+              onClick={() => {
+                Scroll.scroller.scrollTo('contact', {
+                  activeClass: 'active',
+                  spy: true,
+                  smooth: true,
+                  duration: 500,
+                });
+                this.closeDropdown();
+              }}
             >
               Contact
             </Scroll.Link>

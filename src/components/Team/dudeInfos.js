@@ -1,8 +1,8 @@
-import OskiProfile from '../../../assets/images/team/OskiProfile.png';
-import MiikaProfile from '../../../assets/images/team/MiikaProfile.jpg';
-import MaxProfile from '../../../assets/images/team/MaxProfile.png';
-import JussiProfile from '../../../assets/images/team/JussiProfile.jpeg';
-import LauriProfile from '../../../assets/images/team/LauriProfile.png';
+import OskiProfile from '../../../assets/images/team/cinemagraphs/oski.gif';
+import MiikaProfile from '../../../assets/images/team/cinemagraphs/miika.gif';
+import MaxProfile from '../../../assets/images/team/cinemagraphs/max.gif';
+import JussiProfile from '../../../assets/images/team/cinemagraphs/jussi.gif';
+import LauriProfile from '../../../assets/images/team/cinemagraphs/lauri.gif';
 
 const dudeInfos = [
   {
@@ -14,7 +14,7 @@ const dudeInfos = [
   {
     name: 'Oskari Liukku',
     role: 'CEO, Designer, Programmer',
-    description: `When Oski is in the room, everybody works more efficiently. In our game development, he is the voice of best practices. Oski is ready to spend hours grinding in a game to be able to fly in a virtual world.`,
+    description: `When he's is in the room, everybody works more efficiently. In our game development, he is the voice of best practices. Ready to spend hours grinding in a game to be able to fly in a virtual world.`,
     image: OskiProfile,
   },
   {
@@ -26,7 +26,7 @@ const dudeInfos = [
   {
     name: 'Jussi Joki',
     role: 'Programmer',
-    description: `Jussi is a coding wizard who is not afraid to jump into the unknown. He is fast at solving both his and other developers' problems with his wit and deep programming expertise. You will also never see him offline on Steam.`,
+    description: `A coding wizard who is not afraid to jump into the unknown. Fast at solving both his and other developers' problems with his wit and deep programming expertise. You will never see him offline on Steam.`,
     image: JussiProfile,
   },
   {

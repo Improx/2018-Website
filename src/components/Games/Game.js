@@ -55,6 +55,7 @@ export default class Game extends React.Component {
         {links.play && (
           <a
             href={links.play}
+            target="_blank"
             css={{
               color: colors.black,
               height: '100%',

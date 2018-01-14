@@ -3,7 +3,7 @@ const gameInfos = [
     name: 'Trimmer Tycoon',
     description:
       'You\'re the new owner of a beard trimming salon. Satisfy your customers\' beardy dreams and become a millionaire.',
-    header: 'https://i.imgur.com/SKu4miu.png',
+    header: 'https://i.imgur.com/JbhyUEU.png',
     links: {
       play: 'http://store.steampowered.com/app/505750/Trimmer_Tycoon/',
     },

@@ -12,6 +12,7 @@ export default class DesktopMenu extends React.Component {
           smooth
           duration={500}
           className="nav-link"
+          css={{cursor: 'pointer'}}
         >
           Games
         </Scroll.Link>
@@ -22,6 +23,7 @@ export default class DesktopMenu extends React.Component {
           smooth
           duration={500}
           className="nav-link"
+          css={{cursor: 'pointer'}}
         >
           Team
         </Scroll.Link>
@@ -32,6 +34,7 @@ export default class DesktopMenu extends React.Component {
           smooth
           duration={500}
           className="nav-link"
+          css={{cursor: 'pointer'}}
         >
           Contact
         </Scroll.Link>

@@ -3,39 +3,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import * as FontAwesome from 'react-icons/lib/fa';
+
 import {colors} from '../../theme';
 
-const ExternalIconLink = ({children, href, target, rel, src}) => (
-    <a css={{
-        width: 40,
-        height: 'auto',
-        margin: 10,
+function getIcon(icon) {
+  const iconCss = {
+    fill: colors.light,
+    ':hover': {fill: colors.yellow},
+  };
+
+  switch (icon) {
+    case 'twitter':
+      return <FontAwesome.FaTwitterSquare size={'100%'} css={{...iconCss}} />;
+    case 'facebook':
+      return (
+        <FontAwesome.FaFacebookSquare size={'100%'} css={{...iconCss}} />
+      );
+    case 'email':
+      return (
+        <FontAwesome.FaEnvelopeSquare size={'100%'} css={{...iconCss}} />
+      );
+    case 'instagram':
+      return <FontAwesome.FaInstagram size={'100%'} css={{...iconCss}} />;
+    default:
+      break;
+  }
+}
+
+const ExternalIconLink = ({children, href, target, rel, icon}) => (
+  <a
+    css={{
+      width: 40,
+      height: 'auto',
+      margin: 10,
     }}
     href={href}
     target={target}
-    rel={rel}>
-        {children}
-        <img css={{
-            ':hover': {
-                color: colors.yellow,
-            },
-        }}
-        src={src}>
-        </img>
-    </a>
+    rel={rel}
+  >
+    {getIcon(icon)}
+  </a>
 );
 
 ExternalIconLink.propTypes = {
-    children: PropTypes.node,
-    href: PropTypes.string.isRequired,
-    target: PropTypes.string.isRequired,
-    rel: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
+  children: PropTypes.node,
+  href: PropTypes.string.isRequired,
+  target: PropTypes.string.isRequired,
+  rel: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
 };
 
 ExternalIconLink.defaultProps = {
-    target: '_blank',
-    rel: 'nofollow noopener noreferrer',
+  target: '_blank',
+  rel: 'nofollow noopener noreferrer',
 };
 
 export default ExternalIconLink;

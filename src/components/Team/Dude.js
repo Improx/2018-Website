@@ -33,8 +33,23 @@ export default class Dude extends React.Component {
               fontFamily: fonts.primary,
             }}
           >
-            <h3 css={{margin: '0'}}>{dudeInfo.name}</h3>
-            <p css={{color: colors.grey, margin: '0', fontSize: '0.9em'}}>
+            <h3
+              css={{
+                margin: '0',
+                fontFamily: fonts.primary,
+                color: colors.black,
+              }}
+            >
+              {dudeInfo.name}
+            </h3>
+            <p
+              css={{
+                fontFamily: fonts.secondary,
+                color: colors.grey,
+                margin: '0',
+                fontSize: '0.9em',
+              }}
+            >
               {dudeInfo.role}
             </p>
             <p css={{fontFamily: fonts.secondary, fontSize: '0.9em'}}>

@@ -14,19 +14,19 @@ import email from '../../../assets/icons/email.png';
 const socialInfo = [
   {
     path: 'https://twitter.com/improxgames',
-    icon: tw,
+    icon: 'twitter',
   },
   {
     path: 'https://facebook.com/improxgames',
-    icon: fb,
+    icon: 'facebook',
   },
   {
     path: 'https://instagram.com/improxgames',
-    icon: ig,
+    icon: 'instagram',
   },
   {
     path: 'mailto:contact@improxgames.com',
-    icon: email,
+    icon: 'email',
   },
 ];
 
@@ -54,7 +54,8 @@ const Footer = () => (
         </h3>
         <FooterRow>
           {socialInfo.map((x, i) => {
-            return <ExternalIconLink href={x.path} src={x.icon} key={i} />;
+            // return <ExternalIconLink href={x.path} src={x.icon} key={i} />;
+            return <ExternalIconLink href={x.path} icon={x.icon} key={i} />;
           })}
         </FooterRow>
       </footer>

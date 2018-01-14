@@ -31,7 +31,7 @@ const dudeInfos = [
   },
   {
     name: 'Lauri Lappalainen',
-    role: 'Programmer',
+    role: 'Programmer, Tester',
     description: `Enthusiastic developer who loves to give feedback no matter the project. Will keep finding bugs long after you think you're done. Solves problems with exceptional technical know-how and is always interested in learning new techniques.`,
     image: LauriProfile,
   },

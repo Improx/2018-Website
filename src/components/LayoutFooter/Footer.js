@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Scroll from 'react-scroll';
+import FaCopyright from 'react-icons/lib/fa/copyright';
 
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
 import FooterRow from './FooterRow';
 import ExternalIconLink from './ExternalIconLink';
 
@@ -39,6 +40,7 @@ const Footer = () => (
           color: colors.light,
           paddingTop: 30,
           paddingBottom: 30,
+          fontFamily: fonts.primary,
         }}
       >
         <hr css={{color: colors.yellow}} />
@@ -57,6 +59,17 @@ const Footer = () => (
             // return <ExternalIconLink href={x.path} src={x.icon} key={i} />;
             return <ExternalIconLink href={x.path} icon={x.icon} key={i} />;
           })}
+        </FooterRow>
+        <br />
+        <FooterRow>
+          <div css={{color: colors.grey, fontFamily: fonts.secondary}}>
+            <FaCopyright
+              color={colors.grey}
+              size={'20'}
+              viewBox={'0 0 45 45'}
+            />
+            Improx Games 2018
+          </div>
         </FooterRow>
       </footer>
     </div>

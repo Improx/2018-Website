@@ -1,7 +1,7 @@
 import React from 'react';
 import {css} from 'glamor';
 
-import video from '../../../assets/videos/junction.mp4';
+import video from '../../../assets/videos/improx_loop.mp4';
 
 let rule = css({
   verticalAlign: 'middle',
@@ -11,7 +11,7 @@ let rule = css({
 });
 
 const BackgroundVideo = () => (
-  <video muted autoPlay playsInline loop {...rule}>
+  <video width="100%" muted autoPlay playsInline loop {...rule}>
     <source src={video} />
   </video>
 );

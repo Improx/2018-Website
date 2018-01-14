@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
 
 const MissionText = () => (
   <div
@@ -17,7 +17,7 @@ const MissionText = () => (
       lineHeight: '2em',
     }}
   >
-    <h1 css={{textAlign: 'center'}}>
+    <h1 css={{textAlign: 'center', fontFamily: fonts.primary}}>
       We create unique games that we ourselves want to play.
     </h1>
   </div>

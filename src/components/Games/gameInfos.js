@@ -1,9 +1,13 @@
+import trimmertycoon from '../../../assets/images/games/trimmertycoon.jpg';
+import brandcolorquiz from '../../../assets/images/games/brandcolorquiz.png';
+import nowayout from '../../../assets/images/games/nowayout.png';
+
 const gameInfos = [
   {
     name: 'Trimmer Tycoon',
     description:
-      'You\'re the new owner of a beard trimming salon. Satisfy your customers\' beardy dreams and become a millionaire.',
-    header: 'https://i.imgur.com/JbhyUEU.png',
+      "You're the new owner of a beard trimming salon. Satisfy your customers' beardy dreams and become a millionaire.",
+    header: trimmertycoon,
     links: {
       play: 'http://store.steampowered.com/app/505750/Trimmer_Tycoon/',
     },
@@ -11,8 +15,8 @@ const gameInfos = [
   {
     name: 'Brand Color Quiz',
     description:
-      'How well do you know the world\'s most famous colors? A new type of logo quiz.',
-    header: 'https://i.imgur.com/U9syoV8.png',
+      "How well do you know the world's most famous colors? A new type of logo quiz.",
+    header: brandcolorquiz,
     links: {
       play:
         'https://play.google.com/store/apps/details?id=com.ImproxGames.BrandColorQuiz&hl=en',
@@ -22,7 +26,7 @@ const gameInfos = [
     name: 'No Way Out',
     description:
       'Climb up! A randomly generated platformer inspired by the famous kicking scene from the movie 300.',
-    header: 'https://i.imgur.com/9b4uNa9.png',
+    header: nowayout,
     links: {
       play: 'https://www.kongregate.com/games/oskiiiii/way-out',
     },

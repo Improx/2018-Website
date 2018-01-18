@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Scroll from 'react-scroll';
+import {Row, Col} from 'react-flexbox-grid';
 
 import Block from '../Block';
 import Dude from './Dude';
@@ -28,27 +29,15 @@ const Team = () => (
         >
           THE TEAM
         </h1>
-        <div
-          css={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat( auto-fit, minmax(220px, 1fr) )',
-            gridGap: 15,
-            width: '65%',
-            margin: '0 auto',
-            gridAutoColumns: 0,
-            justifyContent: 'space-evenly',
-            '@media(max-width: 600px)': {
-              gridTemplateColumns: 'repeat( auto-fit, minmax(200px, 1fr) )',
-            },
-            '@media(max-width: 800px)': {
-              width: '90%',
-            },
-          }}
-        >
+        <Row height={2} center="xs">
           {dudeInfos.map((x, i) => {
-            return <Dude dudeInfo={x} key={i} />;
+            return (
+              <Col xs={12} sm={6} md={4} lg={4} xl key={i}>
+                <Dude dudeInfo={x} key={i} />
+              </Col>
+            );
           })}
-        </div>
+        </Row>
       </Block>
     </div>
   </Scroll.Element>

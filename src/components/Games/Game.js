@@ -21,7 +21,7 @@ export default class Game extends React.Component {
           css={{
             boxShadow: '0 0 2px #888888',
             height: '100%',
-            paddingBottom: 50,
+            paddingBottom: 65,
           }}
         >
           <img src={this.props.gameInfo.header} css={{margin: 0}} />
@@ -44,9 +44,9 @@ export default class Game extends React.Component {
       <footer
         css={{
           position: 'absolute',
-          bottom: 15,
-          left: 15,
-          right: 15,
+          bottom: 0,
+          left: 0,
+          right: 0,
           float: 'bottom',
           borderTop: 'solid 1px #88888866',
           textAlign: 'center',

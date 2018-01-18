@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Scroll from 'react-scroll';
+import {Row, Col} from 'react-flexbox-grid';
 
 import Block from '../Block';
 import Game from './Game';
@@ -27,30 +28,16 @@ const Games = () => (
         >
           GAMES
         </h1>
-        <div
-          css={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat( auto-fill, minmax(350px, 1fr) )',
-            justifyContent: 'center',
-            width: '65%',
-            margin: '0 auto',
-            gridGap: 15,
-            '@media(max-width: 600px)': {
-              gridTemplateColumns: 'repeat( auto-fit, minmax(350px, 1fr) )',
-            },
-            '@media(max-width: 800px)': {
-              width: '90%',
-            },
-          }}
-        >
+        <Row height={2} center="xs">
           {gameInfos.map((x, i) => {
             return (
-              <article key={i}>
+              <Col xs={12} sm={6} md={4} lg={4} key={i}>
                 <Game gameInfo={x} />
-              </article>
+              </Col>
             );
           })}
-        </div>
+        </Row>
+        {/* </div> */}
       </Block>
     </div>
   </Scroll.Element>

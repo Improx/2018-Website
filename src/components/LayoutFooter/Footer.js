@@ -7,11 +7,6 @@ import {fonts, colors} from '../../theme';
 import FooterRow from './FooterRow';
 import ExternalIconLink from './ExternalIconLink';
 
-import tw from '../../../assets/icons/tw.png';
-import fb from '../../../assets/icons/fb.png';
-import ig from '../../../assets/icons/ig.png';
-import email from '../../../assets/icons/email.png';
-
 const socialInfo = [
   {
     path: 'https://twitter.com/improxgames',

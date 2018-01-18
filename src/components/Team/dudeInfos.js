@@ -7,13 +7,13 @@ import LauriProfile from '../../../assets/images/team/cinemagraphs/lauri.gif';
 const dudeInfos = [
   {
     name: 'Oskari Liukku',
-    role: 'CEO, Designer, Programmer',
+    role: 'Designer, Programmer',
     description: `When he's is in the room, everybody works more efficiently. In our game development, he is the voice of best practices. Ready to spend hours grinding in a game to be able to fly in a virtual world.`,
     image: OskiProfile,
   },
   {
     name: 'Miika Kanerva',
-    role: 'Designer, Programmer, Artist',
+    role: 'Designer, Programmer',
     description: `With a mind full of amazing ideas he still manages to find room for joking around. Diligent developer who will see that the project gets done on time, yet somehow there's always room for one more feature.`,
     image: MiikaProfile,
   },

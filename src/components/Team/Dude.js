@@ -10,52 +10,50 @@ export default class Dude extends React.Component {
     const dudeInfo = this.props.dudeInfo;
 
     return (
-      <div>
+      <div
+        css={{
+          backgroundSize: 'cover',
+          backgroundColor: colors.light,
+          color: colors.black,
+          boxShadow: '0 0 2px #888888',
+          height: '100%',
+        }}
+      >
+        <img
+          css={{
+            width: '100%',
+          }}
+          src={dudeInfo.image}
+        />
         <div
           css={{
-            backgroundSize: 'cover',
-            backgroundColor: colors.light,
-            color: colors.black,
-            boxShadow: '0 0 2px #888888',
-            height: '100%',
+            marginLeft: '0.5em',
+            marginRight: '0.5em',
+            fontFamily: fonts.primary,
           }}
         >
-          <img
+          <h3
             css={{
-              width: '100%',
-            }}
-            src={dudeInfo.image}
-          />
-          <div
-            css={{
-              marginLeft: '0.5em',
-              marginRight: '0.5em',
+              margin: '0',
               fontFamily: fonts.primary,
+              color: colors.black,
             }}
           >
-            <h3
-              css={{
-                margin: '0',
-                fontFamily: fonts.primary,
-                color: colors.black,
-              }}
-            >
-              {dudeInfo.name}
-            </h3>
-            <p
-              css={{
-                fontFamily: fonts.secondary,
-                color: colors.grey,
-                margin: '0',
-                fontSize: '0.9em',
-              }}
-            >
-              {dudeInfo.role}
-            </p>
-            <p css={{fontFamily: fonts.secondary, fontSize: '0.9em'}}>
-              {dudeInfo.description}
-            </p>
-          </div>
+            {dudeInfo.name}
+          </h3>
+          <p
+            css={{
+              fontFamily: fonts.secondary,
+              color: colors.grey,
+              margin: '0',
+              fontSize: '0.9em',
+            }}
+          >
+            {dudeInfo.role}
+          </p>
+          <p css={{fontFamily: fonts.secondary, fontSize: '0.9em'}}>
+            {dudeInfo.description}
+          </p>
         </div>
       </div>
     );

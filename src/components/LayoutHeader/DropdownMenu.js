@@ -6,13 +6,13 @@ import onClickOutside from 'react-onclickoutside';
 import FaBars from 'react-icons/lib/fa/bars';
 import FaCopyright from 'react-icons/lib/fa/copyright';
 
-import {colors} from '../../theme';
+import { colors } from '../../theme';
 import './DropdownMenu.css';
 
 class DropdownMenu extends React.Component {
   constructor() {
     super();
-    this.state = {open: false};
+    this.state = { open: false };
   }
 
   handleDropdownClick() {
@@ -38,15 +38,18 @@ class DropdownMenu extends React.Component {
   render() {
     return (
       <div
-        className={classNames({'dropdown-menu': true, show: this.state.open})}
+        className={classNames({ 'dropdown-menu': true, show: this.state.open })}
         onClick={this.handleDropdownClick.bind(this)}
       >
         <FaBars
           color={colors.yellow}
           size={'2em'}
-          css={{float: 'right', marginRight: '1rem'}}
+          css={{ float: 'right', marginRight: '1rem' }}
         />
-        <div css={{backgroundColor: colors.black}} className="dropdown-content">
+        <div
+          css={{ backgroundColor: colors.black }}
+          className="dropdown-content"
+        >
           <Scroll.Link
             className="nav-link"
             onClick={() => {

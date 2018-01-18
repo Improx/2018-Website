@@ -14,9 +14,6 @@ const Team = () => (
     <div
       css={{
         backgroundColor: colors.black,
-        paddingTop: 30,
-        paddingBottom: 30,
-        marginTop: 3,
       }}
     >
       <Block>
@@ -32,7 +29,15 @@ const Team = () => (
         <Row height={2} center="xs">
           {dudeInfos.map((x, i) => {
             return (
-              <Col xs={12} sm={6} md={4} lg={4} xl key={i}>
+              <Col
+                xs={12}
+                sm={6}
+                md={4}
+                lg={4}
+                xl
+                key={i}
+                css={{marginTop: '0.2em', marginBottom: '0.2em'}}
+              >
                 <Dude dudeInfo={x} key={i} />
               </Col>
             );

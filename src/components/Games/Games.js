@@ -14,8 +14,6 @@ const Games = () => (
     <div
       css={{
         backgroundColor: colors.light,
-        paddingTop: 30,
-        paddingBottom: 30,
       }}
     >
       <Block>
@@ -31,7 +29,14 @@ const Games = () => (
         <Row height={2} center="xs">
           {gameInfos.map((x, i) => {
             return (
-              <Col xs={12} sm={6} md={4} lg={4} key={i}>
+              <Col
+                xs={12}
+                sm={6}
+                md={4}
+                lg={4}
+                key={i}
+                css={{marginTop: '0.2em', marginBottom: '0.2em'}}
+              >
                 <Game gameInfo={x} />
               </Col>
             );

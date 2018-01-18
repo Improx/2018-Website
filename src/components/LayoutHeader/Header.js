@@ -11,9 +11,14 @@ import './Header.css';
 
 const Header = () => (
   <Headroom
+    disable
     style={{
-      background: colors.black,
       width: '100%',
+    }}
+    css={{
+      '@media screen and (max-width: 750px)': {
+        backgroundColor: colors.black,
+      },
     }}
   >
     <div className="header-container">

@@ -4,10 +4,19 @@ import classNames from 'classnames';
 import Scroll from 'react-scroll';
 import onClickOutside from 'react-onclickoutside';
 import FaBars from 'react-icons/lib/fa/bars';
+import FaClose from 'react-icons/lib/fa/close';
 import FaCopyright from 'react-icons/lib/fa/copyright';
 
 import { colors } from '../../theme';
 import './DropdownMenu.css';
+
+const ddHoverStyle = {
+  cursor: 'pointer',
+  ':hover': {
+    color: colors.yellow,
+    borderColor: colors.yellow
+  }
+}
 
 class DropdownMenu extends React.Component {
   constructor() {
@@ -39,19 +48,16 @@ class DropdownMenu extends React.Component {
     return (
       <div
         className={classNames({ 'dropdown-menu': true, show: this.state.open })}
-        onClick={this.handleDropdownClick.bind(this)}
       >
-        <FaBars
-          color={colors.yellow}
-          size={'2em'}
-          css={{ float: 'right', marginRight: '1rem' }}
-        />
+        <div onClick={this.handleDropdownClick.bind(this)}>
+          { this.state.open ? <FaClose color={colors.yellow} size={'2.5em'} css={{ float: 'right', marginRight: '1rem' }}/> : <FaBars color={colors.yellow} size={'2em'} css={{ float: 'right', marginRight: '1rem' }} /> }
+        </div>
         <div
-          css={{ backgroundColor: colors.black }}
           className="dropdown-content"
         >
           <Scroll.Link
             className="nav-link"
+            css={ddHoverStyle}
             onClick={() => {
               Scroll.scroller.scrollTo('games', {
                 activeClass: 'active',
@@ -66,6 +72,7 @@ class DropdownMenu extends React.Component {
           </Scroll.Link>
           <Scroll.Link
             className="nav-link"
+            css={ddHoverStyle}
             onClick={() => {
               Scroll.scroller.scrollTo('team', {
                 activeClass: 'active',
@@ -81,6 +88,7 @@ class DropdownMenu extends React.Component {
           <div onClick={this.closeDropdown.bind(this)}>
             <Scroll.Link
               className="nav-link"
+              css={ddHoverStyle}
               onClick={() => {
                 Scroll.scroller.scrollTo('contact', {
                   activeClass: 'active',

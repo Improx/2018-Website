@@ -1,6 +1,15 @@
 import React from 'react';
 import Scroll from 'react-scroll';
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
+
+const menuItemStyle = {
+  cursor: 'pointer',
+  ':hover': {
+    color: colors.yellow,
+    borderColor: colors.yellow,
+  },
+  fontFamily: fonts.primary
+};
 
 export default class DesktopMenu extends React.Component {
   render() {
@@ -13,12 +22,7 @@ export default class DesktopMenu extends React.Component {
           smooth
           duration={500}
           className="nav-link"
-          css={{
-            cursor: 'pointer',
-            ':hover': {
-              color: colors.yellow,
-            },
-          }}
+          css={menuItemStyle}
         >
           Games
         </Scroll.Link>
@@ -29,12 +33,7 @@ export default class DesktopMenu extends React.Component {
           smooth
           duration={500}
           className="nav-link"
-          css={{
-            cursor: 'pointer',
-            ':hover': {
-              color: colors.yellow,
-            },
-          }}
+          css={menuItemStyle}
         >
           Team
         </Scroll.Link>
@@ -45,12 +44,7 @@ export default class DesktopMenu extends React.Component {
           smooth
           duration={500}
           className="nav-link"
-          css={{
-            cursor: 'pointer',
-            ':hover': {
-              color: colors.yellow,
-            },
-          }}
+          css={menuItemStyle}
         >
           Contact
         </Scroll.Link>

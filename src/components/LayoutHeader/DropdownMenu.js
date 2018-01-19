@@ -7,15 +7,16 @@ import FaBars from 'react-icons/lib/fa/bars';
 import FaClose from 'react-icons/lib/fa/close';
 import FaCopyright from 'react-icons/lib/fa/copyright';
 
-import {colors} from '../../theme';
+import {fonts, colors} from '../../theme';
 import './DropdownMenu.css';
 
-const ddHoverStyle = {
+const menuItemStyle = {
   cursor: 'pointer',
   ':hover': {
     color: colors.yellow,
     borderColor: colors.yellow,
   },
+  fontFamily: fonts.primary
 };
 
 class DropdownMenu extends React.Component {
@@ -67,7 +68,7 @@ class DropdownMenu extends React.Component {
         <div className="dropdown-content">
           <Scroll.Link
             className="nav-link"
-            css={ddHoverStyle}
+            css={menuItemStyle}
             to="games"
             onClick={() => {
               Scroll.scroller.scrollTo('games', {
@@ -83,7 +84,7 @@ class DropdownMenu extends React.Component {
           </Scroll.Link>
           <Scroll.Link
             className="nav-link"
-            css={ddHoverStyle}
+            css={menuItemStyle}
             to="team"
             onClick={() => {
               Scroll.scroller.scrollTo('team', {
@@ -100,7 +101,7 @@ class DropdownMenu extends React.Component {
           <div onClick={this.closeDropdown.bind(this)}>
             <Scroll.Link
               className="nav-link"
-              css={ddHoverStyle}
+              css={menuItemStyle}
               to="contact"
               onClick={() => {
                 Scroll.scroller.scrollTo('contact', {

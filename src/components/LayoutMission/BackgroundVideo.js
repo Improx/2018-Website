@@ -4,7 +4,7 @@ import {css} from 'glamor';
 import video from '../../../assets/videos/improx_loop.mp4';
 
 let rule = css({
-  position: 'fixed',
+  position: 'absolute',
   right: 0,
   bottom: 0,
   minWidth: '100%',

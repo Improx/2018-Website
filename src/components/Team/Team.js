@@ -8,6 +8,7 @@ import Dude from './Dude';
 
 import {fonts, colors} from '../../theme';
 import dudeInfos from './dudeInfos';
+import './Team.css';
 
 const Team = () => (
   <Scroll.Element name="team">
@@ -29,15 +30,7 @@ const Team = () => (
         <Row height={2} center="xs">
           {dudeInfos.map((x, i) => {
             return (
-              <Col
-                xs={12}
-                sm={6}
-                md={4}
-                lg={4}
-                xl
-                key={i}
-                css={{marginTop: '0.2em', marginBottom: '0.2em'}}
-              >
+              <Col xs={12} sm={6} md={4} lg={4} xl key={i} className="team-col">
                 <Dude dudeInfo={x} key={i} />
               </Col>
             );

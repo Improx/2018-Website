@@ -8,6 +8,7 @@ import Game from './Game';
 
 import {fonts, colors} from '../../theme';
 import gameInfos from './gameInfos';
+import './Games.css';
 
 const Games = () => (
   <Scroll.Element name="games">
@@ -29,14 +30,7 @@ const Games = () => (
         <Row height={2} center="xs">
           {gameInfos.map((x, i) => {
             return (
-              <Col
-                xs={12}
-                sm={6}
-                md={4}
-                lg={4}
-                key={i}
-                css={{marginTop: '0.2em', marginBottom: '0.2em'}}
-              >
+              <Col xs={12} sm={6} md={4} lg={4} key={i} className="game-col">
                 <Game gameInfo={x} />
               </Col>
             );

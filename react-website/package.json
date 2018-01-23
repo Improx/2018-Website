@@ -1,0 +1,26 @@
+{
+  "name": "react-website",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "glamor": "^2.20.40",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-flexbox-grid": "^2.0.0",
+    "react-headroom": "^2.2.2",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7",
+    "react-onclickoutside": "^6.7.1",
+    "react-scripts": "1.1.0",
+    "react-scroll": "^1.7.6",
+    "typeface-francois-one": "0.0.44",
+    "typeface-lato": "0.0.44"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

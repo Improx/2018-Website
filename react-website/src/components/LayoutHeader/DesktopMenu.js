@@ -1,5 +1,6 @@
 import React from 'react';
 import Scroll from 'react-scroll';
+import ReactGA from 'react-ga';
 import {css} from 'glamor';
 import {fonts, colors} from '../../theme';
 
@@ -37,32 +38,56 @@ export default class DesktopMenu extends React.Component {
     return (
       <div {...navLinksStyle}>
         <Scroll.Link
-          activeClass="active"
-          to="games"
-          spy
-          smooth
-          duration={500}
           {...menuItemStyle}
+          to="games"
+          onClick={() => {
+            Scroll.scroller.scrollTo('games', {
+              activeClass: 'active',
+              spy: true,
+              smooth: true,
+              duration: 500,
+            });
+            ReactGA.event({
+              category: 'Navigation',
+              action: 'Used navbar to go to GAMES.',
+            });
+          }}
         >
           Games
         </Scroll.Link>
         <Scroll.Link
-          activeClass="active"
-          to="team"
-          spy
-          smooth
-          duration={500}
           {...menuItemStyle}
+          to="team"
+          onClick={() => {
+            Scroll.scroller.scrollTo('team', {
+              activeClass: 'active',
+              spy: true,
+              smooth: true,
+              duration: 500,
+            });
+            ReactGA.event({
+              category: 'Navigation',
+              action: 'Used navbar to go to TEAM.',
+            });
+          }}
         >
           Team
         </Scroll.Link>
         <Scroll.Link
-          activeClass="active"
-          to="contact"
-          spy
-          smooth
-          duration={500}
           {...menuItemStyle}
+          to="contact"
+          onClick={() => {
+            Scroll.scroller.scrollTo('contact', {
+              activeClass: 'active',
+              spy: true,
+              smooth: true,
+              duration: 500,
+            });
+            ReactGA.event({
+              category: 'Navigation',
+              action: 'Used navbar to go to CONTACT.',
+            });
+          }}
         >
           Contact
         </Scroll.Link>

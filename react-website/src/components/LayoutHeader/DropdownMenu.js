@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {css} from 'glamor';
 import Scroll from 'react-scroll';
 import onClickOutside from 'react-onclickoutside';
+import ReactGA from 'react-ga';
 import FaBars from 'react-icons/lib/fa/bars';
 import FaClose from 'react-icons/lib/fa/close';
 
@@ -73,7 +74,6 @@ class DropdownMenu extends React.Component {
         </div>
         <div className="dropdown-content">
           <Scroll.Link
-            className="nav-link"
             {...menuItemStyle}
             to="games"
             onClick={() => {
@@ -84,12 +84,15 @@ class DropdownMenu extends React.Component {
                 duration: 500,
               });
               this.closeDropdown();
+              ReactGA.event({
+                category: 'Navigation',
+                action: 'Used mobile navbar to go to GAMES.',
+              });
             }}
           >
             Games
           </Scroll.Link>
           <Scroll.Link
-            className="nav-link"
             {...menuItemStyle}
             to="team"
             onClick={() => {
@@ -100,13 +103,16 @@ class DropdownMenu extends React.Component {
                 duration: 500,
               });
               this.closeDropdown();
+              ReactGA.event({
+                category: 'Navigation',
+                action: 'Used mobile navbar to go to TEAM.',
+              });
             }}
           >
             Team
           </Scroll.Link>
           <div onClick={this.closeDropdown.bind(this)}>
             <Scroll.Link
-              className="nav-link"
               {...menuItemStyle}
               to="contact"
               onClick={() => {
@@ -117,6 +123,10 @@ class DropdownMenu extends React.Component {
                   duration: 500,
                 });
                 this.closeDropdown();
+                ReactGA.event({
+                  category: 'Navigation',
+                  action: 'Used mobile navbar to go to CONTACT.',
+                });
               }}
             >
               Contact

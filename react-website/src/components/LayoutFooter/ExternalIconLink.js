@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ReactGA from 'react-ga';
 import {css} from 'glamor';
 
 import * as FontAwesome from 'react-icons/lib/fa';
@@ -37,6 +38,12 @@ const ExternalIconLink = ({children, href, target, rel, icon}) => (
     href={href}
     target={target}
     rel={rel}
+    onClick={() => {
+      ReactGA.event({
+        category: 'Social',
+        action: 'Went to check us out on ' + icon,
+      });
+    }}
   >
     {getIcon(icon)}
   </a>

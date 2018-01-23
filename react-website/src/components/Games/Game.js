@@ -1,5 +1,6 @@
 import React from 'react';
 import {css} from 'glamor';
+import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 
 import './game.css';
@@ -71,6 +72,12 @@ export default class Game extends React.Component {
               height: '100%',
               textDecoration: 'none',
             })}
+            onClick={() => {
+              ReactGA.event({
+                category: 'Games',
+                action: 'Went to play ' + this.props.gameInfo.name,
+              });
+            }}
           >
             <div
               {...css({

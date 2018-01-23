@@ -8,6 +8,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-flexbox-grid": "^2.0.0",
+    "react-ga": "^2.4.1",
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",

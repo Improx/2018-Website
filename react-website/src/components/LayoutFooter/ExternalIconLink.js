@@ -14,30 +14,33 @@ function getIcon(icon) {
     ':hover': {fill: colors.yellow},
   });
 
+  const alt = 'Improx Games' + icon;
+
   switch (icon) {
     case 'twitter':
-      return <FontAwesome.FaTwitterSquare size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaTwitterSquare alt = {alt} size={'100%'} {...iconCss} />;
     case 'facebook':
-      return <FontAwesome.FaFacebookSquare size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaFacebookSquare alt = {alt} size={'100%'} {...iconCss} />;
     case 'email':
-      return <FontAwesome.FaEnvelopeSquare size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaEnvelopeSquare alt = {alt} size={'100%'} {...iconCss} />;
     case 'instagram':
-      return <FontAwesome.FaInstagram size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaInstagram alt = {alt} size={'100%'} {...iconCss} />;
     default:
       break;
   }
 }
 
-const ExternalIconLink = ({children, href, target, rel, icon}) => (
+const ExternalIconLink = ({children, alt, href, target, rel, icon}) => (
   <a
     {...css({
       width: 40,
       height: 'auto',
       margin: 10,
     })}
+    alt = {alt}
     href={href}
     target={target}
-    rel={rel}
+    rel='nofollow noopener noreferrer'
     onClick={() => {
       ReactGA.event({
         category: 'Social',
@@ -51,6 +54,7 @@ const ExternalIconLink = ({children, href, target, rel, icon}) => (
 
 ExternalIconLink.propTypes = {
   children: PropTypes.node,
+  alt: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,
   rel: PropTypes.string.isRequired,

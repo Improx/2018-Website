@@ -50,7 +50,7 @@ const Footer = () => (
         <h3 {...footerHeaderStyle}>Contact us at:</h3>
         <FooterRow>
           {socialInfo.map((x, i) => {
-            return <ExternalIconLink href={x.path} icon={x.icon} key={i} />;
+            return <ExternalIconLink href={x.path} alt={'Improx Games ' + x.icon} icon={x.icon} key={i} />;
           })}
         </FooterRow>
         <br />

@@ -12,7 +12,7 @@ const colors = {
 };
 
 const fonts = {
-  primary: 'Francois One, serif',
+  primary: 'Francois One, sans-serif',
   secondary: 'Lato, sans-serif',
 };
 

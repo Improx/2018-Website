@@ -4,7 +4,7 @@ import {css} from 'glamor';
 import {colors} from '../../theme';
 
 import video from '../../assets/videos/improx_loop.mp4';
-import poster from '../../assets/videos/poster.png';
+import poster from '../../assets/videos/poster.webp';
 
 let rule = css({
   position: 'absolute',

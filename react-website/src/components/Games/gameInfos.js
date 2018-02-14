@@ -1,6 +1,6 @@
-import trimmertycoon from '../../assets/images/games/trimmertycoon.jpg';
-import brandcolorquiz from '../../assets/images/games/brandcolorquiz.png';
-import nowayout from '../../assets/images/games/nowayout.png';
+import trimmertycoon from '../../assets/images/games/trimmertycoon.webp';
+import brandcolorquiz from '../../assets/images/games/brandcolorquiz.webp';
+import nowayout from '../../assets/images/games/nowayout.webp';
 
 const gameInfos = [
   {

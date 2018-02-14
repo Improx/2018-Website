@@ -4,7 +4,7 @@ import Headroom from 'react-headroom';
 import DropdownMenu from './DropdownMenu';
 import DesktopMenu from './DesktopMenu';
 
-import logoFull from '../../assets/icons/improxLogoWhite.png';
+import logoFull from '../../assets/icons/improxLogoWhite_small.png';
 import {colors} from '../../theme';
 import './Header.css';
 

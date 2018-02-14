@@ -42,13 +42,13 @@ export default class Game extends React.Component {
               {gameInfo.description}
             </p>
           </div>
-          {this.renderFooter(gameInfo.links)}
+          {this.renderFooter(gameInfo.name, gameInfo.links)}
         </div>
       </div>
     );
   }
 
-  renderFooter(links) {
+  renderFooter(name, links) {
     if (!links) return;
 
     const footer = (
@@ -66,7 +66,9 @@ export default class Game extends React.Component {
         {links.play && (
           <a
             href={links.play}
+            alt={'Play ' + name}
             target="_blank"
+            rel='nofollow noopener noreferrer'
             {...css({
               color: colors.black,
               height: '100%',

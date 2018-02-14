@@ -26,7 +26,7 @@ const arrowStyle = css({
 });
 
 const Mission = () => (
-  <div {...css({position: 'relative', minHeight: '100vh'})}>
+  <div {...css({position: 'relative', minHeight: '75vh'})}>
     <LayoutHeader />
     <BackgroundVideo />
     <MissionText />

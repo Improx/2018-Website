@@ -6,6 +6,7 @@ import LayoutFooter from './components/LayoutFooter';
 import LayoutMission from './components/LayoutMission';
 import Games from './components/Games';
 import Team from './components/Team';
+import CookieConsent from './components/CookieConsent';
 
 import './index.css';
 
@@ -58,6 +59,7 @@ const TemplateWrapper = ({children}) => (
         },
       ]}
     />
+    <CookieConsent />
     <LayoutMission />
     <Games />
     <Team />

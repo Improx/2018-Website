@@ -14,18 +14,6 @@ const TemplateWrapper = ({children}) => (
   <div>
     <Helmet
       title="Improx Games"
-      meta={[
-        {
-          name: 'description',
-          content:
-            'Improx Games is a Finnish games company. Our latest game Trimmer Tycoon has been downloaded over 150k times on Steam.',
-        },
-        {
-          name: 'keywords',
-          content:
-            'games, company, startup, finland, improx, trimmer tycoon, steam',
-        },
-      ]}
       links={[
         {
           rel: 'apple-touch-icon',
@@ -58,7 +46,19 @@ const TemplateWrapper = ({children}) => (
           content: '#ffffff',
         },
       ]}
-    />
+    >
+      <meta
+        name="description"
+        content="Improx Games is a Finnish games company. Our latest game Trimmer Tycoon has been downloaded over 150k times on Steam."
+      />
+      <meta
+        name="keywords"
+        content="games, company, startup, finland, improx, trimmer tycoon, steam"
+      />
+      <meta property="og:title" content="Improx Games" />
+      <meta property="og:description" content="Improx Games is a Finnish games company. We create unique games that we ourselves want to play." />
+      <meta property="og:image" content="/favicon-32x32.png" />
+    </Helmet>
     <CookieConsent />
     <LayoutMission />
     <Games />

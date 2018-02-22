@@ -8,44 +8,80 @@ import './game.css';
 import {fonts, colors} from '../../theme';
 
 export default class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {highlighted: false};
+
+    this.highlight = this.highlight.bind(this);
+    this.unHighlight = this.unHighlight.bind(this);
+
+    this.gameInfo = this.props.gameInfo;
+  }
+
   render() {
-    const gameInfo = this.props.gameInfo;
+    const gameInfo = this.gameInfo;
 
     return (
-      <div
+      <a
+        href={gameInfo.links.play}
+        alt={'Play ' + gameInfo.name}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        onMouseEnter={this.highlight}
+        onMouseLeave={this.unHighlight}
+        onClick={() => {
+          ReactGA.event({
+            category: 'Games',
+            action: 'Went to play ' + this.props.gameInfo.name,
+          });
+        }}
         {...css({
-          position: 'relative',
-          backgroundColor: colors.light,
-          height: '100%',
+          textDecoration: 'none',
         })}
       >
         <div
           {...css({
-            boxShadow: '0 0 2px #888888',
+            position: 'relative',
+            backgroundColor: colors.light,
             height: '100%',
           })}
         >
-          <img
-            src={gameInfo.header}
-            alt={gameInfo.name}
-            {...css({margin: 0, width: '100%'})}
-          />
-          <div {...css({padding: 10, color: colors.black})}>
-            <h2 {...css({fontFamily: fonts.primary})}>{gameInfo.name}</h2>
-            <p
-              {...css({
-                fontFamily: fonts.secondary,
-                fontSize: '1.1em',
-                paddingBottom: 65,
-              })}
-            >
-              {gameInfo.description}
-            </p>
+          <div
+            {...css({
+              boxShadow: '0 0 2px #888888',
+              height: '100%',
+            })}
+          >
+            <img
+              src={gameInfo.header}
+              alt={gameInfo.name}
+              {...css({margin: 0, width: '100%'})}
+            />
+            <div {...css({padding: 10, color: colors.black})}>
+              <h2 {...css({fontFamily: fonts.primary})}>{gameInfo.name}</h2>
+              <p
+                {...css({
+                  fontFamily: fonts.secondary,
+                  fontSize: '1.1em',
+                  paddingBottom: 65,
+                })}
+              >
+                {gameInfo.description}
+              </p>
+            </div>
+            {this.renderFooter(gameInfo.name, gameInfo.links)}
           </div>
-          {this.renderFooter(gameInfo.name, gameInfo.links)}
         </div>
-      </div>
+      </a>
     );
+  }
+
+  highlight() {
+    this.setState({highlighted: true});
+  }
+
+  unHighlight() {
+    this.setState({highlighted: false});
   }
 
   renderFooter(name, links) {
@@ -64,35 +100,25 @@ export default class Game extends React.Component {
         })}
       >
         {links.play && (
-          <a
-            href={links.play}
-            alt={'Play ' + name}
-            target="_blank"
-            rel='nofollow noopener noreferrer'
+          <div
             {...css({
               color: colors.black,
               height: '100%',
               textDecoration: 'none',
             })}
-            onClick={() => {
-              ReactGA.event({
-                category: 'Games',
-                action: 'Went to play ' + this.props.gameInfo.name,
-              });
-            }}
           >
             <div
-              {...css({
-                width: '100%',
-                height: '100%',
-                paddingTop: 15,
-                paddingBottom: 15,
-                backgroundColor: colors.black,
-                color: colors.light,
-                ':hover': {
-                  color: colors.yellow,
+              {...css(
+                {
+                  width: '100%',
+                  height: '100%',
+                  paddingTop: 15,
+                  paddingBottom: 15,
+                  backgroundColor: colors.black,
+                  color: colors.light,
                 },
-              })}
+                this.state.highlighted && {color: colors.yellow}
+              )}
             >
               <span
                 {...css({
@@ -104,7 +130,7 @@ export default class Game extends React.Component {
                 <strong>Play</strong>
               </span>
             </div>
-          </a>
+          </div>
         )}
       </footer>
     );

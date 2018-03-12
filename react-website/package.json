@@ -6,7 +6,7 @@
     "classnames": "^2.2.5",
     "glamor": "^2.20.40",
     "react": "^16.2.0",
-    "react-cookie-consent": "^1.0.3",
+    "react-cookie-consent": "^1.0.4",
     "react-dom": "^16.2.0",
     "react-flexbox-grid": "^2.0.0",
     "react-ga": "^2.4.1",
@@ -15,7 +15,7 @@
     "react-icons": "^2.2.7",
     "react-onclickoutside": "^6.7.1",
     "react-scripts": "1.1.0",
-    "react-scroll": "^1.7.6",
+    "react-scroll": "^1.7.7",
     "typeface-francois-one": "0.0.44",
     "typeface-lato": "0.0.44"
   },

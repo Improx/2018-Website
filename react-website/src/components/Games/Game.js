@@ -52,11 +52,11 @@ export default class Game extends React.Component {
               height: '100%',
             })}
           >
-            <img
-              src={gameInfo.header}
-              alt={gameInfo.name}
-              {...css({margin: 0, width: '100%'})}
-            />
+            <picture>
+              <source srcSet={gameInfo.headerWebp} type="image/webp" {...css({margin: 0, width: '100%'})}/>
+              <source srcSet={gameInfo.headerLegacy} type="image/png" {...css({margin: 0, width: '100%'})}/>
+              <img src={gameInfo.headerLegacy} alt={gameInfo.name} {...css({margin: 0, width: '100%'})}/>
+            </picture>
             <div {...css({padding: 10, color: colors.black})}>
               <h2 {...css({fontFamily: fonts.primary})}>{gameInfo.name}</h2>
               <p

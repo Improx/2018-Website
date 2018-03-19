@@ -18,13 +18,13 @@ function getIcon(icon) {
 
   switch (icon) {
     case 'twitter':
-      return <FontAwesome.FaTwitterSquare alt = {alt} size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaTwitterSquare alt={alt} size={'100%'} {...iconCss} />;
     case 'facebook':
-      return <FontAwesome.FaFacebookSquare alt = {alt} size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaFacebookSquare alt={alt} size={'100%'} {...iconCss} />;
     case 'email':
-      return <FontAwesome.FaEnvelopeSquare alt = {alt} size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaEnvelopeSquare alt={alt} size={'100%'} {...iconCss} />;
     case 'instagram':
-      return <FontAwesome.FaInstagram alt = {alt} size={'100%'} {...iconCss} />;
+      return <FontAwesome.FaInstagram alt={alt} size={'100%'} {...iconCss} />;
     default:
       break;
   }
@@ -37,7 +37,7 @@ const ExternalIconLink = ({children, alt, href, target, rel, icon}) => (
       height: 'auto',
       margin: 10,
     })}
-    alt = {alt}
+    aria-label={alt}
     href={href}
     target={target}
     rel='nofollow noopener noreferrer'

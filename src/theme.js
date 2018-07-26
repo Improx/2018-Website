@@ -1,3 +1,6 @@
+import 'typeface-francois-one';
+import 'typeface-lato';
+
 // https://coolors.co/0b0a07-3f4045-5d737e-e4ff1a-fcfcfc
 const colors = {
   yellow: '#E4FF1A',
@@ -9,8 +12,8 @@ const colors = {
 };
 
 const fonts = {
-  primary: 'francois one',
-  secondary: 'lato',
+  primary: 'Francois One, sans-serif',
+  secondary: 'Lato, sans-serif',
 };
 
 const SIZES = {
@@ -76,4 +79,4 @@ const media = {
   },
 };
 
-export {colors, fonts, media};
+export {colors, fonts, SIZES, media};

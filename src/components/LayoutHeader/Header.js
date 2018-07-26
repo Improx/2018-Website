@@ -1,11 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import Headroom from 'react-headroom';
 
 import DropdownMenu from './DropdownMenu';
 import DesktopMenu from './DesktopMenu';
 
-import logoFull from '../../../assets/icons/improxLogoWhite.png';
+import logoFull from '../../assets/icons/improxLogoWhite_small.png';
 import {colors} from '../../theme';
 import './Header.css';
 
@@ -17,15 +16,15 @@ const Header = () => (
     }}
   >
     <div className="header-container">
-      <Link
-        to="/"
+      <a
+        href="/"
         style={{
           color: colors.light,
         }}
         className="logo-container"
       >
         <img src={logoFull} alt="Improx Games" className="logo" />
-      </Link>
+      </a>
       <DropdownMenu />
       <DesktopMenu />
     </div>

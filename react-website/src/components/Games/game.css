@@ -1,9 +1,0 @@
-.gameContainer {
-  overflow: hidden;
-  margin: 0;
-}
-
-.bm--card-equal-height {
-  display: flex;
-  flex-direction: column;
-}

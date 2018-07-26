@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {css} from 'glamor';
 import Scroll from 'react-scroll';
 import FaCopyright from 'react-icons/lib/fa/copyright';
 
@@ -26,38 +27,35 @@ const socialInfo = [
   },
 ];
 
+const footerStyle = css({
+  backgroundColor: colors.black,
+  color: colors.light,
+  paddingTop: 30,
+  paddingBottom: 30,
+  fontFamily: fonts.primary,
+});
+
+const footerHeaderStyle = css({
+  textAlign: 'center',
+  margin: 0,
+  marginBottom: '0.3em',
+  marginTop: '1em',
+});
+
 const Footer = () => (
   <Scroll.Element name="contact">
     <div>
-      <footer
-        css={{
-          backgroundColor: colors.black,
-          color: colors.light,
-          paddingTop: 30,
-          paddingBottom: 30,
-          fontFamily: fonts.primary,
-        }}
-      >
-        <hr css={{color: colors.yellow}} />
-        <h3
-          css={{
-            textAlign: 'center',
-            margin: 0,
-            marginBottom: '0.3em',
-            marginTop: '1em',
-          }}
-        >
-          Contact us at:
-        </h3>
+      <footer {...footerStyle}>
+        <hr {...css({color: colors.yellow})} />
+        <h3 {...footerHeaderStyle}>Contact us at:</h3>
         <FooterRow>
           {socialInfo.map((x, i) => {
-            // return <ExternalIconLink href={x.path} src={x.icon} key={i} />;
-            return <ExternalIconLink href={x.path} icon={x.icon} key={i} />;
+            return <ExternalIconLink href={x.path} alt={'Improx Games ' + x.icon} icon={x.icon} key={i} />;
           })}
         </FooterRow>
         <br />
         <FooterRow>
-          <div css={{color: colors.grey, fontFamily: fonts.secondary}}>
+          <div {...css({color: colors.grey, fontFamily: fonts.secondary})}>
             <FaCopyright
               color={colors.grey}
               size={'20'}

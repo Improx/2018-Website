@@ -1,7 +1,10 @@
 import React from 'react';
 import {css} from 'glamor';
 
-import video from '../../../assets/videos/improx_loop.mp4';
+import {colors} from '../../theme';
+
+import video from '../../assets/videos/improx_loop.mp4';
+import poster from '../../assets/videos/poster.webp';
 
 let rule = css({
   position: 'absolute',
@@ -13,11 +16,13 @@ let rule = css({
   height: 'auto',
   zIndex: -100,
   filter: 'brightness(30%)',
+  backgroundColor: colors.black,
 });
 
 const BackgroundVideo = () => (
-  <video width="100%" muted autoPlay playsInline loop {...rule}>
+  <video width="100%" muted autoPlay playsInline loop poster={poster} {...rule}>
     <source src={video} />
+    Your browser has blocked this video.
   </video>
 );
 

@@ -1,40 +1,28 @@
 {
-  "name": "improx-2018-site",
-  "description": "Improx 2018 website",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "react-website",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
-    "gatsby": "^1.9.63",
-    "gatsby-link": "^1.6.21",
-    "gatsby-plugin-favicon": "^2.1.1",
-    "gatsby-plugin-glamor": "^1.6.9",
-    "gatsby-plugin-google-analytics": "^1.0.15",
-    "gatsby-plugin-google-fonts": "0.0.3",
-    "gatsby-plugin-react-helmet": "^1.0.5",
-    "hex2rgba": "0.0.1",
+    "glamor": "^2.20.40",
+    "react": "^16.2.0",
+    "react-cookie-consent": "^1.0.4",
+    "react-dom": "^16.2.0",
     "react-flexbox-grid": "^2.0.0",
+    "react-ga": "^2.4.1",
     "react-headroom": "^2.2.2",
+    "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
-    "react-onclickoutside": "^6.7.0",
-    "react-responsive-modal": "^2.0.0",
-    "react-scroll": "^1.7.4"
+    "react-onclickoutside": "^6.7.1",
+    "react-scripts": "1.1.0",
+    "react-scroll": "^1.7.7",
+    "typeface-francois-one": "0.0.44",
+    "typeface-lato": "0.0.44"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "eslint": "^4.12.1",
-    "eslint-config-google": "^0.9.1",
-    "eslint-plugin-react": "^7.5.1",
-    "prettier": "^1.7.4"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

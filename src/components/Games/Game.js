@@ -1,4 +1,6 @@
 import React from 'react';
+import {css} from 'glamor';
+import ReactGA from 'react-ga';
 import PropTypes from 'prop-types';
 
 import './game.css';
@@ -6,43 +8,88 @@ import './game.css';
 import {fonts, colors} from '../../theme';
 
 export default class Game extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {highlighted: false};
+
+    this.highlight = this.highlight.bind(this);
+    this.unHighlight = this.unHighlight.bind(this);
+
+    this.gameInfo = this.props.gameInfo;
+  }
+
   render() {
-    const gameInfo = this.props.gameInfo;
+    const gameInfo = this.gameInfo;
 
     return (
-      <div
-        css={{
-          position: 'relative',
-          backgroundColor: colors.light,
-          height: '100%',
+      <a
+        href={gameInfo.links.play}
+        alt={'Play ' + gameInfo.name}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        onMouseEnter={this.highlight}
+        onMouseLeave={this.unHighlight}
+        onClick={() => {
+          ReactGA.event({
+            category: 'Games',
+            action: 'Went to play ' + this.props.gameInfo.name,
+          });
         }}
+        {...css({
+          textDecoration: 'none',
+        })}
       >
         <div
-          css={{
-            boxShadow: '0 0 2px #888888',
+          {...css({
+            position: 'relative',
+            backgroundColor: colors.light,
             height: '100%',
-            paddingBottom: 65,
-          }}
+          })}
         >
-          <img src={this.props.gameInfo.header} css={{margin: 0}} />
-          <div css={{padding: 10, color: colors.black}}>
-            <h2 css={{fontFamily: fonts.primary}}>{gameInfo.name}</h2>
-            <p css={{fontFamily: fonts.secondary, fontSize: '1.1em'}}>
-              {gameInfo.description}
-            </p>
+          <div
+            {...css({
+              boxShadow: '0 0 2px #888888',
+              height: '100%',
+            })}
+          >
+            <picture>
+              <source srcSet={gameInfo.headerWebp} type="image/webp" {...css({margin: 0, width: '100%'})}/>
+              <source srcSet={gameInfo.headerLegacy} type="image/png" {...css({margin: 0, width: '100%'})}/>
+              <img src={gameInfo.headerLegacy} alt={gameInfo.name} {...css({margin: 0, width: '100%'})}/>
+            </picture>
+            <div {...css({padding: 10, color: colors.black})}>
+              <h2 {...css({fontFamily: fonts.primary})}>{gameInfo.name}</h2>
+              <p
+                {...css({
+                  fontFamily: fonts.secondary,
+                  fontSize: '1.1em',
+                  paddingBottom: 65,
+                })}
+              >
+                {gameInfo.description}
+              </p>
+            </div>
+            {this.renderFooter(gameInfo.name, gameInfo.links)}
           </div>
-          {this.renderFooter(gameInfo.links)}
         </div>
-      </div>
+      </a>
     );
   }
 
-  renderFooter(links) {
+  highlight() {
+    this.setState({highlighted: true});
+  }
+
+  unHighlight() {
+    this.setState({highlighted: false});
+  }
+
+  renderFooter(name, links) {
     if (!links) return;
 
     const footer = (
       <footer
-        css={{
+        {...css({
           position: 'absolute',
           bottom: 0,
           left: 0,
@@ -50,44 +97,41 @@ export default class Game extends React.Component {
           float: 'bottom',
           borderTop: 'solid 1px #88888866',
           textAlign: 'center',
-        }}
+        })}
       >
         {links.play && (
-          <a
-            href={links.play}
-            target="_blank"
-            css={{
+          <div
+            {...css({
               color: colors.black,
               height: '100%',
               textDecoration: 'none',
-            }}
+            })}
           >
             <div
-              css={{
-                width: '100%',
-                height: '100%',
-                paddingTop: 15,
-                paddingBottom: 15,
-                backgroundColor: colors.black,
-                color: colors.light,
-                ':hover': {
-                  color: colors.yellow,
+              {...css(
+                {
+                  width: '100%',
+                  height: '100%',
+                  paddingTop: 15,
+                  paddingBottom: 15,
+                  backgroundColor: colors.black,
+                  color: colors.light,
                 },
-              }}
+                this.state.highlighted && {color: colors.yellow}
+              )}
             >
               <span
-                css={{
+                {...css({
                   fontFamily: fonts.primary,
                   fontSize: '1.3em',
                   letterSpacing: '2px',
-                }}
+                })}
               >
                 <strong>Play</strong>
               </span>
             </div>
-          </a>
+          </div>
         )}
-        {links.presskit && <a href={links.presskit}>Presskit</a>}
       </footer>
     );
 

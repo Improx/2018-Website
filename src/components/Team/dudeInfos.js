@@ -1,8 +1,8 @@
-import OskiProfile from '../../../assets/images/team/cinemagraphs/oski.gif';
-import MiikaProfile from '../../../assets/images/team/cinemagraphs/miika.gif';
-import MaxProfile from '../../../assets/images/team/cinemagraphs/max.gif';
-import JussiProfile from '../../../assets/images/team/cinemagraphs/jussi.gif';
-import LauriProfile from '../../../assets/images/team/cinemagraphs/lauri.gif';
+import OskiProfile from '../../assets/images/team/cinemagraphs/oski.gif';
+import MiikaProfile from '../../assets/images/team/cinemagraphs/miika.gif';
+import MaxProfile from '../../assets/images/team/cinemagraphs/max.gif';
+import JussiProfile from '../../assets/images/team/cinemagraphs/jussi.gif';
+import LauriProfile from '../../assets/images/team/cinemagraphs/lauri.gif';
 
 const dudeInfos = [
   {

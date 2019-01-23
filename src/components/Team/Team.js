@@ -7,6 +7,8 @@ import {Row, Col} from 'react-flexbox-grid';
 import Block from '../Block';
 import Dude from './Dude';
 
+import helsinkiImg from '../../assets/images/helsinki.jpg';
+
 import {fonts, colors} from '../../theme';
 import dudeInfos from './dudeInfos';
 
@@ -14,19 +16,36 @@ const Team = () => (
   <Scroll.Element name="team">
     <div
       {...css({
-        backgroundColor: colors.black,
+        backgroundColor: '#FCFCFC',
+        backgroundImage: `url(${helsinkiImg})`,
+        backgroundRepeat: 'no-repeat',
+        '@media(max-width: 1199px)': {
+          backgroundAttachment: 'fixed'
+        }
       })}
     >
       <Block>
-        <h1
-          {...css({
+        <div {...css({
             fontFamily: fonts.primary,
-            color: colors.light,
+            color: colors.black,
             textAlign: 'center',
-          })}
-        >
-          THE TEAM
-        </h1>
+            marginBottom: '3em',
+          })}>
+          <h1>
+            THE TEAM
+          </h1>
+          <div {...css({
+            fontWeight: 400,
+            fontSize: '25px'
+          })}>
+            <p>
+              We're five childhood friends from Helsinki, Finland.
+            </p>
+            <p>
+              Meet the founders of Improx Games.
+            </p>
+          </div>
+        </div>
         <Row height={2} center="xs">
           {dudeInfos.map((x, i) => {
             return (

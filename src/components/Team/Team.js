@@ -18,10 +18,8 @@ const Team = () => (
       {...css({
         backgroundColor: '#FCFCFC',
         backgroundImage: `url(${helsinkiImg})`,
+        backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        '@media(max-width: 1199px)': {
-          backgroundAttachment: 'fixed'
-        }
       })}
     >
       <Block>

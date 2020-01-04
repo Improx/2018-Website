@@ -15,9 +15,7 @@
     "react-icons": "^2.2.7",
     "react-onclickoutside": "^6.7.1",
     "react-scripts": "^3.3.0",
-    "react-scroll": "^1.7.10",
-    "typeface-francois-one": "0.0.44",
-    "typeface-lato": "0.0.44"
+    "react-scroll": "^1.7.10"
   },
   "scripts": {
     "start": "react-scripts start",

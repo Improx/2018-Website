@@ -6,7 +6,7 @@ import FaAngleDown from "react-icons/lib/fa/angle-down";
 
 import LayoutHeader from "../LayoutHeader";
 import BackgroundVideo from "./BackgroundVideo";
-import MissionText from "./MissionText";
+import Centered from "./MissionText";
 import improxVideo from "../../assets/videos/improx_loop.mp4";
 import improxVideoThumb from "../../assets/videos/poster.jpg";
 
@@ -31,7 +31,9 @@ const Mission = () => (
   <div {...css({ position: "relative", minHeight: "75vh" })}>
     <LayoutHeader />
     <BackgroundVideo videoFile={improxVideo} thumbnail={improxVideoThumb} />
-    <MissionText />
+    <Centered>
+      <p>We create unique games that we ourselves want to play.</p>
+    </Centered>
     <Scroll.Link
       activeClass="active"
       to="games"

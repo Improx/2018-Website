@@ -9,6 +9,7 @@ import Team from "./components/Team";
 import CookieConsent from "./components/CookieConsent";
 
 import "./index.css";
+import CubePromo from "./components/Cube/Cube";
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -64,6 +65,7 @@ const TemplateWrapper = ({ children }) => (
     </Helmet>
     <CookieConsent />
     <LayoutMission />
+    <CubePromo />
     <Games />
     <Team />
     <LayoutFooter />

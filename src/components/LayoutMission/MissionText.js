@@ -1,28 +1,28 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-import {css} from 'glamor';
+import { css } from "glamor";
 
-import {fonts, colors} from '../../theme';
+import { colors } from "../../theme";
 
 const missionStyle = css({
-  position: 'absolute',
+  position: "absolute",
   top: 0,
   right: 0,
   bottom: 0,
   left: 0,
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
   color: colors.light,
-  lineHeight: '2em',
+  textAlign: "center"
 });
 
-const MissionText = () => (
-  <div {...missionStyle}>
-    <h1 {...css({textAlign: 'center', fontFamily: fonts.primary})}>
-      We create unique games that we ourselves want to play.
-    </h1>
-  </div>
-);
+const Centered = ({ children }) => <div {...missionStyle}>{children}</div>;
 
-export default MissionText;
+export default Centered;
+
+Centered.propTypes = {
+  children: PropTypes.node.isRequired
+};

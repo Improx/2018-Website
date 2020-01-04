@@ -13,11 +13,10 @@ let rule = css({
   width: "auto",
   height: "auto",
   zIndex: -100,
-  filter: "brightness(30%)",
   backgroundColor: colors.black
 });
 
-const BackgroundVideo = ({ videoFile, thumbnail }) => (
+const BackgroundVideo = ({ videoFile, thumbnail, brightness = 30 }) => (
   <video
     width="100%"
     muted
@@ -26,6 +25,7 @@ const BackgroundVideo = ({ videoFile, thumbnail }) => (
     loop
     poster={thumbnail}
     {...rule}
+    {...css({ filter: `brightness(${brightness}%)` })}
   >
     <source src={videoFile} />
     Your browser has blocked this video.
@@ -36,5 +36,6 @@ export default BackgroundVideo;
 
 BackgroundVideo.propTypes = {
   videoFile: PropTypes.string.isRequired,
-  thumbnail: PropTypes.string.isRequired
+  thumbnail: PropTypes.string.isRequired,
+  brightness: PropTypes.number
 };

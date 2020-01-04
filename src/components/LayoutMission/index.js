@@ -1,3 +1,3 @@
-import Mission from './Mission';
+import Mission from "./CubePromo";
 
 export default Mission;

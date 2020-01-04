@@ -1,50 +1,50 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 
-import LayoutFooter from './components/LayoutFooter';
-import LayoutMission from './components/LayoutMission';
-import Games from './components/Games';
-import Team from './components/Team';
-import CookieConsent from './components/CookieConsent';
+import LayoutFooter from "./components/LayoutFooter";
+import LayoutMission from "./components/LayoutMission";
+import Games from "./components/Games";
+import Team from "./components/Team";
+import CookieConsent from "./components/CookieConsent";
 
-import './index.css';
+import "./index.css";
 
-const TemplateWrapper = ({children}) => (
+const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
       title="Improx Games"
       links={[
         {
-          rel: 'apple-touch-icon',
-          sizes: '180x180',
-          href: '/apple-touch-icon.png',
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png"
         },
         {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '32x32',
-          href: '/favicon-32x32.png',
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32x32.png"
         },
         {
-          rel: 'icon',
-          type: 'image/png',
-          sizes: '16x16',
-          href: '/favicon-16x16.png',
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png"
         },
         {
-          rel: 'manifest',
-          href: '/manifest.json',
+          rel: "manifest",
+          href: "/manifest.json"
         },
         {
-          rel: 'mask-icon',
-          href: '/safari-pinned-tab.svg',
-          color: '#5bbad5',
+          rel: "mask-icon",
+          href: "/safari-pinned-tab.svg",
+          color: "#5bbad5"
         },
         {
-          name: 'theme-color',
-          content: '#ffffff',
-        },
+          name: "theme-color",
+          content: "#ffffff"
+        }
       ]}
     >
       <meta
@@ -56,7 +56,10 @@ const TemplateWrapper = ({children}) => (
         content="games, company, startup, finland, improx, trimmer tycoon, steam"
       />
       <meta property="og:title" content="Improx Games" />
-      <meta property="og:description" content="Improx Games is a Finnish games company. We create unique games that we ourselves want to play." />
+      <meta
+        property="og:description"
+        content="Improx Games is a Finnish games company. We create unique games that we ourselves want to play."
+      />
       <meta property="og:image" content="/favicon-32x32.png" />
     </Helmet>
     <CookieConsent />
@@ -68,7 +71,7 @@ const TemplateWrapper = ({children}) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 };
 
 export default TemplateWrapper;

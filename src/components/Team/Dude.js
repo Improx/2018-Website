@@ -16,6 +16,7 @@ export default class Dude extends React.Component {
         {...css({
           backgroundSize: 'cover',
           backgroundColor: colors.light,
+          borderRadius: '5px',
           color: colors.black,
           boxShadow: '0 0 2px #888888',
           height: '100%',
@@ -24,6 +25,7 @@ export default class Dude extends React.Component {
         <img
           {...css({
             width: '100%',
+            borderRadius: '5px'
           })}
           src={dudeInfo.image}
           alt={dudeInfo.name}
@@ -32,6 +34,7 @@ export default class Dude extends React.Component {
           {...css({
             marginLeft: '0.5em',
             marginRight: '0.5em',
+            marginTop: '0.5em',
             fontFamily: fonts.primary,
           })}
         >

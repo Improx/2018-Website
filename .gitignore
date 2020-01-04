@@ -3,6 +3,6 @@
 node_modules
 .cache/
 # Build directory
-build/
-.DS_Store
+build
+*.DS_Store
 yarn-error.log

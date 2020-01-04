@@ -1,10 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { css } from "glamor";
 
 import { colors } from "../../theme";
-
-import video from "../../assets/videos/improx_loop.mp4";
-import poster from "../../assets/videos/poster.webp";
 
 let rule = css({
   position: "absolute",
@@ -19,11 +17,24 @@ let rule = css({
   backgroundColor: colors.black
 });
 
-const BackgroundVideo = () => (
-  <video width="100%" muted autoPlay playsInline loop poster={poster} {...rule}>
-    <source src={video} />
+const BackgroundVideo = ({ videoFile, thumbnail }) => (
+  <video
+    width="100%"
+    muted
+    autoPlay
+    playsInline
+    loop
+    poster={thumbnail}
+    {...rule}
+  >
+    <source src={videoFile} />
     Your browser has blocked this video.
   </video>
 );
 
 export default BackgroundVideo;
+
+BackgroundVideo.propTypes = {
+  videoFile: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string.isRequired
+};

@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import {css} from 'glamor';
+import { css } from "glamor";
 
-const FooterRow = ({children}) => (
+const FooterRow = ({ children }) => (
   <div
     {...css({
-      width: '100%',
-      display: 'flex',
-      justifyContent: 'center',
+      width: "100%",
+      display: "flex",
+      justifyContent: "center"
     })}
   >
     {children}
@@ -16,7 +16,7 @@ const FooterRow = ({children}) => (
 );
 
 FooterRow.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default FooterRow;

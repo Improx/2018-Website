@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import LayoutFooter from "./components/LayoutFooter";
-import LayoutMission from "./components/LayoutMission";
 import Games from "./components/Games";
 import Team from "./components/Team";
 import CookieConsent from "./components/CookieConsent";
@@ -64,7 +63,7 @@ const TemplateWrapper = ({ children }) => (
       <meta property="og:image" content="/favicon-32x32.png" />
     </Helmet>
     <CookieConsent />
-    <LayoutMission />
+    {/* <LayoutMission /> */}
     <CubePromo />
     <Games />
     <Team />

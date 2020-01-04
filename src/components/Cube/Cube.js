@@ -9,7 +9,7 @@ import Block from "../Block";
 
 const CubePromo = () => (
   <Scroll.Element name="cube">
-    <div {...css({ backgroundColor: colors.light })}>
+    <div {...css({ backgroundColor: colors.dark, color: colors.light })}>
       <Block>cube</Block>
     </div>
   </Scroll.Element>

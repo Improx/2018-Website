@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import LayoutFooter from "./components/LayoutFooter";
+import LayoutHeader from "./components/LayoutHeader";
 import Games from "./components/Games";
 import Team from "./components/Team";
 import CookieConsent from "./components/CookieConsent";

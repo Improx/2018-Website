@@ -43,7 +43,11 @@ const columnContainerStyle = css({
 const promoContainerStyle = css({
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between"
+  justifyContent: "space-between",
+  marginBottom: "2em",
+  "@media screen and (max-width: 750px)": {
+    flexDirection: "column"
+  }
 });
 
 const textColumnStyle = css({
@@ -78,7 +82,7 @@ const CubePromo = () => (
         backgroundColor: colors.dark,
         color: colors.light,
         marginTop: "-3%",
-        height: "110vh"
+        minHeight: "110vh"
       })}
     >
       <div
@@ -129,7 +133,10 @@ const CubePromo = () => (
               </div>
             </section>
           </div>
-          <ReactPlayer url="https://youtu.be/iCquAqKBens" />
+          <ReactPlayer
+            url="https://youtu.be/iCquAqKBens"
+            {...css({ maxWidth: "100%" })}
+          />
         </div>
       </div>
     </div>
